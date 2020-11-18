@@ -47,9 +47,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 19.0 Media Queries
 20.0 Print
 --------------------------------------------------------------*/
+/*@font-face {*/
+/*	font-family: 'Roboto Mono', monospace;*/
+/*	src: url(fonts/roboto-mono-v12-latin-regular.woff2) format('woff2'),*/
+/*	url(fonts/roboto-mono-v12-latin-regular.woff) format('woff'),*/
+/*	url(fonts/roboto-mono-v12-latin-regular.ttf) format('truetype');*/
+/*}*/
+
+@font-face {
+	font-family: 'Aileron', Arial, sans-serif;
+	src: url(assets/fonts/Aileron-Black.otf) format('otf');
+}
 
 html, body {
-	font-family: sans-serif;
+	font-family: 'Aileron', Arial, sans-serif;
 	line-height: 1.15;
 	margin: 0;
 	padding: 0;
