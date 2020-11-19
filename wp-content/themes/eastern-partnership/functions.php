@@ -27,6 +27,11 @@ function eastern_partnership_setup() {
 add_action( 'after_setup_theme', 'eastern_partnership_setup' );
 
 
+/**
+ * Proper way to remove admin_login space [Remove margin-top: 32px !important]
+ */
+function my_function_admin_bar(){ return false; }
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
 
 
