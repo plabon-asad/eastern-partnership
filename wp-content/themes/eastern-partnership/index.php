@@ -13,7 +13,38 @@
 
 <div class="main-wrap">
     <section class="top-banner">
-        <div class="container banner-container"></div>
+        <div class="container banner-container text-center">
+            <div class="banner-content">
+                <h2>Eastern Partnership <br> Youth Forum</h2>
+                <p>We all will meet in Vilnius on 17-20 June 2019!</p>
+            </div>
+
+            <div class="remaining-time">
+                <div class="time-content">
+                    <div class="title">Remaining time</div>
+                    <ul class="common-ul">
+                        <li>
+                            <time>11</time>
+                            <div>Days</div>
+                        </li>
+                        <li>
+                            <time>21</time>
+                            <div>Hours</div>
+                        </li>
+                        <li>
+                            <time>24</time>
+                            <div>Minutes</div>
+                        </li>
+                        <li>
+                            <time>19</time>
+                            <div>Seconds</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
     </section>
 </div>
 <h1>Lorem Ipsum is simply dummy text</h1>
