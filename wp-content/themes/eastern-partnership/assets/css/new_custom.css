@@ -1,0 +1,8 @@
+.top-banner {
+    background-image: url("../../assets/images/slide-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #2f5bea;
+    min-height: 540px;
+}
