@@ -71,5 +71,11 @@ html, body {
 	padding: 0;
 }
 
+body p {
+	color: #747474;
+}
+
+.h-190 {height: 190px}
+
 
 

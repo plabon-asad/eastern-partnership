@@ -116,3 +116,76 @@ ul.common-ul {
     display: none;
 }
 
+/* Youth Forum */
+.forum-container .heading h4 {
+    color: #8eb9fd;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.forum-container .heading h3 {
+    color: #213d7e;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.forum-container .heading {
+    margin-bottom: 40px;
+}
+
+.content-item:nth-child(1) .img-wrap {background: #f2f1ff;}
+.content-item:nth-child(2) .img-wrap {background: #fcb72e;}
+.content-item:nth-child(3) .img-wrap {background: #2e5bea;}
+.content-item:nth-child(4) .img-wrap {background: #c23138;}
+.content-item:nth-child(5) .img-wrap {background: #5ebaab;}
+/*body{background-color: red}*/
+
+.content-row .content-item .img-wrap {
+    width: 100px;
+    height: 100px;
+    /*background: tomato;*/
+    border-radius: 50%;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+.content-row .content-item .img-wrap img {
+    padding: 10px;
+    max-width: 100%;
+    width: 75px;
+}
+
+.content-row .content-item p.para {
+    color: #444;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* End forum BG */
+.end-forum {
+    border-bottom: 1px solid #eaeaec;
+    margin-bottom: 50px;
+    min-height: 150px;
+}
+
+.end-forum .end-forum-bg {
+    position: relative;
+}
+
+.end-forum .end-forum-bg:before {
+    content: '';
+    position: absolute;
+    background-image: url("../../assets/images/l-triangle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #2f5bea;
+    width: 200px;
+    height: auto;
+}
+
+
+
+

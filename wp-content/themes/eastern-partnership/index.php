@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
+    <!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <?php wp_head(); ?>
 </head>
@@ -47,6 +47,7 @@
         </div>
     </section>
 
+    <div class="h-190"></div>
     <section class="youth-forum">
         <div class="container forum-container">
             <div class="heading text-center">
@@ -58,7 +59,8 @@
                 <div class="row content-row">
                     <div class="col-md-4 content-item">
                         <div class="img-wrap">
-                            <img src="assets/images/" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img1.png"
+                                 alt="">
                         </div>
                         <p class="para">
                             To celebrate the 10th anniversary of European Union and Eastern Partnership
@@ -67,7 +69,8 @@
                     </div>
                     <div class="col-md-4 content-item">
                         <div class="img-wrap">
-                            <img src="" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img2.png"
+                                 alt="">
                         </div>
                         <p class="para">
                             Provide opportunities for young people to contribute to the high level discussions about
@@ -77,7 +80,8 @@
                     </div>
                     <div class="col-md-4 content-item">
                         <div class="img-wrap">
-                            <img src="" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img3.png"
+                                 alt="">
                         </div>
                         <p class="para">
                             Foster discussion and unity between delegates of European Union and Eastern Partnership
@@ -86,7 +90,8 @@
                     </div>
                     <div class="col content-item align-self-center">
                         <div class="img-wrap">
-                            <img src="" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img4.png"
+                                 alt="">
                         </div>
                         <p class="para">
                             Encourage further cooperation, partnerships and good practice exchange among young people,
@@ -96,50 +101,51 @@
                     </div>
                     <div class="col content-item align-self-center">
                         <div class="img-wrap">
-                            <img src="" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img5.png"
+                                 alt="">
                         </div>
                         <p class="para">
-                            Collect the opinions of young people on Critical thinking, media literacy and active participation
+                            Collect the opinions of young people on Critical thinking, media literacy and active
+                            participation
                             and inform the discussions of Eastern Partnership High level Summit in 2020.
                         </p>
                     </div>
 
 
-
-
-
                 </div>
+            </div>
+            <div class="end-forum">
+                <div class="end-forum-bg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="count-wrap">
+        <div class="count-container container">
+            <div class="row">
+                <div class="col-md-4"></div>
             </div>
         </div>
     </section>
 </div>
-<h1>Lorem Ipsum is simply dummy text</h1>
-<p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-    Lorem Ipsum.
-</p>
 
 
 <?php
-			if ( have_posts() ) :
+if (have_posts()) :
 
-				// Start the Loop.
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/post/content', get_post_format() );
+    // Start the Loop.
+    while (have_posts()) :
+        the_post();
+        get_template_part('template-parts/post/content', get_post_format());
 
-				endwhile;
+    endwhile;
 
-			else :
+else :
 
-				get_template_part( 'template-parts/post/content', 'none' );
+    get_template_part('template-parts/post/content', 'none');
 
-			endif;
-			?>
+endif;
+?>
 </body>
 </html>
 
