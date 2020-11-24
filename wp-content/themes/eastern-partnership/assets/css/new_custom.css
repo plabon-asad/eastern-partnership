@@ -156,12 +156,6 @@ ul.common-ul {
     width: 75px;
 }
 
-.content-row .content-item p.para {
-    color: #444;
-    text-align: justify;
-    line-height: 1.4;
-}
-
 /* End forum BG */
 .end-forum {
     border-bottom: 1px solid #eaeaec;
@@ -192,23 +186,24 @@ ul.common-ul {
 }
 
 .count-col .count-item h2 {
-    color: #224379;
-    font-size: 85px;
-    font-weight: 300;
+    color: #223F78;
+    font-size: 90px;
+    font-weight: lighter;
 }
 
 .count-col .count-item b {
-    color: #224379;
+    color: #223F78;
     text-transform: uppercase;
     margin-bottom: 20px;
     display: inline-block;
     letter-spacing: 5px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .count-col .count-item p {
-    font-size: 15px;
-    color: #999;
+    font-size: 14px;
+    color: #7E8085;
     font-weight: 200;
 }
 
@@ -220,18 +215,76 @@ ul.common-ul {
 
 /* About forum */
 .forum-map {
-    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pattern-green:before, .pattern-blue:before, .diamond-bg:after {
+    position: absolute;
+    content: '';
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.pattern-green:before {
+    background-image: url("../../assets/images/pattern-g.png");
+    bottom: -30px;
+    left: 25px;
     width: 100%;
     height: 100%;
-    background: gray;
+}
+
+.pattern-blue:before {
+    background-image: url("../../assets/images/pattern-b.png");
+    bottom: -30px;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.diamond-bg:after {
+    background-image: url(../../assets/images/diamond.png);
+    top: -100px;
+    left: -105px;
+    width: 180px;
+    height: 210px;
 }
 
 .af-row {
     padding: 100px 0;
 }
 
+.map-col {
+    padding-right: 50px;
+}
+
+.forum-map img {
+    max-width: 100%;
+}
+
+.content-col {
+    padding-left: 50px;
+}
+
 /* Moderator design */
+.m-container:after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    background-image: url("../../assets/images/pattern-big.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+}
+
 .m-container {
+    position: relative;
     padding-top: 100px;
     margin-bottom: 200px;
 }
@@ -278,14 +331,16 @@ ul.common-ul {
 }
 
 .m-col .card-item .content h3 {
-    color: #555556;
+    color: #2C2E30;
     font-weight: normal;
     margin-bottom: 5px;
     margin-top: 40px;
+    font-size: 28px;
 }
 
 .m-col .card-item .content span {
-    color: #878789;
+    color: #7E8085;
+    font-size: 16px;
 }
 
 /* Big map design */
@@ -297,6 +352,8 @@ ul.common-ul {
     max-width: 100%;
     height: auto;
 }
+
+
 
 
 

@@ -5,7 +5,7 @@
     <!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"
@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <div class="h-190"></div>
+    <div class="h-250"></div>
     <section class="youth-forum">
         <div class="container forum-container">
             <div class="heading text-center">
@@ -84,8 +84,8 @@
                                  alt="">
                         </div>
                         <p class="para">
-                            To celebrate the 10th anniversary of European Union and Eastern Partnership
-                            cooperation, highlight the impact and achievements;
+                            To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,
+                            highlight the impact and achievements;
                         </p>
                     </div>
                     <div class="col-md-4 content-item">
@@ -94,8 +94,8 @@
                                  alt="">
                         </div>
                         <p class="para">
-                            Provide opportunities for young people to contribute to the high level discussions about
-                            a joint vision for European Union and Eastern Partnership cooperation, and to convey
+                            Provide opportunities for young people to contribute to the high level discussions about a
+                            joint vision for European Union and Eastern Partnership cooperation, and to convey
                             recommendations to the Eastern Partnership Summit in 2020;
                         </p>
                     </div>
@@ -105,7 +105,7 @@
                                  alt="">
                         </div>
                         <p class="para">
-                            Foster discussion and unity between delegates of European Union and Eastern Partnership
+                            Foster discussions and unity between delegates of European Union and Eastern Partnership
                             regions on the changing landscape of youth demands and youth policy;
                         </p>
                     </div>
@@ -127,8 +127,7 @@
                         </div>
                         <p class="para">
                             Collect the opinions of young people on Critical thinking, media literacy and active
-                            participation
-                            and inform the discussions of Eastern Partnership High level Summit in 2020.
+                            participation and inform the discussions of Eastern Partnership High level Summit in 2020.
                         </p>
                     </div>
 
@@ -149,8 +148,10 @@
                     <div class="count-item">
                         <h2 class="light-font">250</h2>
                         <b>participants</b>
-                        <p>including active young people, youth workers and youth policy makers from both Eastern
-                            Partnership</p>
+                        <p>
+                            including active young people, youth workers and youth policy makers from both Eastern
+                            Partnership
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 count-col text-center">
@@ -164,7 +165,7 @@
                     <div class="count-item">
                         <h2 class="light-font">3</h2>
                         <b>days</b>
-                        <p>Programme - will meet and discuss in a two-day event in Vilnius, on 17-20 June 2018.</p>
+                        <p>Programme — will meet and discuss in a two-day event in Vilnius, on 17-20 June 2018.</p>
                     </div>
                 </div>
             </div>
@@ -174,39 +175,41 @@
     <!--    Big map-->
     <section class="big-map">
         <div class="bm-container">
-            <img src="<?php echo esc_url( get_template_directory_uri() )?>/assets/images/big-map.jpg" alt="">
+            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/big-map.jpg" alt="">
         </div>
     </section>
 
     <!--    Google map-->
-<!--    <section class="g-map">-->
-<!--        <div class="g-map-wrap">-->
-            <!--The div element for the map -->
-<!--            <div id="map"></div>-->
-<!--        </div>-->
-<!---->
-<!--    </section>-->
+    <!--    <section class="g-map">-->
+    <!--        <div class="g-map-wrap">-->
+    <!--The div element for the map -->
+    <!--            <div id="map"></div>-->
+    <!--        </div>-->
+    <!---->
+    <!--    </section>-->
 
     <!--    About forum-->
     <section class="about-forum">
         <div class="container af-container">
             <div class="af-row row">
                 <div class="map-col col-lg-6">
-                    <div id="about-forum" class="forum-map"></div>
+                    <div id="about-forum" class="forum-map diamond-bg pattern-green">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
+                             alt="">
+                    </div>
                 </div>
                 <div class="content-col col-lg-6">
                     <div class="content">
                         <h4 class="title-h4">About Forum</h4>
                         <h3 class="title-mid">We all will meet in Vilnius on 17-20 June 2019!</h3>
                         <p>
-                            The event will gather youth and youth work representatives, around 250
-                            participants: each EaP country with 10 delegates from youth, organizations and
-                            institutions working with youth, EaP Youth ambassadors network representatives, 34
-                            "Erasmus+" programme countries with 2 delegates per country, team of facilitators and
-                            experts, other European Union, Council of Europe, national agency and international youth
-                            organizations representatives.
+                            The event will gather youth and youth work representatives, around 250 participants: each
+                            EaP country with 10 delegates from youth, organizations and institutions working with youth,
+                            EaP Youth ambassadors network representatives, 34 “Erasmus+” programme countries with 2
+                            delegates per country, team of facilitators and experts, other European Union, Council of
+                            Europe, national agency and international youth organizations representatives.
                         </p>
-                        <a href="#">Ezeraiciu km., Ezeraiciu g.2, Vilnius, Lietuva LT-14200</a>
+                        <a href="#">Ežeraičių km., Ežeraičių g. 2, Vilnius, Lietuva LT-14200</a>
                     </div>
 
                 </div>
@@ -214,11 +217,13 @@
         </div>
     </section>
 
+
     <!--    About Lithuania-->
     <section class="about-lithuania gray-bg">
         <div class="container af-container">
             <div class="af-row row">
-                <div class="content-col col-lg-6">
+
+                <div class="map-col col-lg-6">
                     <div class="content">
                         <h4 class="title-h4">About Lithuania</h4>
                         <h3 class="title-mid">Lithuania is a country in Northern Europe</h3>
@@ -230,14 +235,19 @@
                             Vilnius is the capital of Lithuania and its largest city. It is known for its baroque
                             architecture, seen especially in its medieval old town.
                         </p>
-                        <a href="#">Find out more  <i class="fa fa fa-long-arrow-right"></i></a>
+                        <a href="#">Find out more <i class="fa fa fa-long-arrow-right"></i></a>
                     </div>
 
                 </div>
-                <div class="map-col col-lg-6">
-                    <div id="about-forum" class="forum-map"></div>
-                </div>
+                <div class="content-col col-lg-6">
+                    <div id="about-forum" class="forum-map">
+                        <div class="pattern-blue">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/country-img.png"
+                                 alt="">
+                        </div>
 
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -251,10 +261,13 @@
                     <div class="card-item">
                         <div class="img-wrap">
                             <div class="mask">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png"
+                                     alt="">
                             </div>
 
-                            <img class="flag" src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male-flag.png" alt="">
+                            <img class="flag"
+                                 src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male-flag.png"
+                                 alt="">
                         </div>
                         <div class="content">
                             <h3>Marcus Vrecer</h3>
@@ -268,9 +281,12 @@
                     <div class="card-item">
                         <div class="img-wrap">
                             <div class="mask">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png"
+                                     alt="">
                             </div>
-                            <img class="flag" src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female-flag.png" alt="">
+                            <img class="flag"
+                                 src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female-flag.png"
+                                 alt="">
                         </div>
                         <div class="content">
                             <h3>Marcus Vrecer</h3>
