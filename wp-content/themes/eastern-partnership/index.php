@@ -5,8 +5,29 @@
     <!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
 
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"
+            defer></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const uluru = {lat: 56.263920, lng: 9.501785};
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 5,
+                center: uluru,
+
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+        }
+    </script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -24,19 +45,19 @@
                     <div class="title">Remaining time</div>
                     <ul class="common-ul">
                         <li>
-                            <time>11</time>
+                            <time class="light-fontx">11</time>
                             <div>Days</div>
                         </li>
                         <li>
-                            <time>21</time>
+                            <time class="light-fontx">21</time>
                             <div>Hours</div>
                         </li>
                         <li>
-                            <time>24</time>
+                            <time class="light-fontx">24</time>
                             <div>Minutes</div>
                         </li>
                         <li>
-                            <time>19</time>
+                            <time class="light-fontx">19</time>
                             <div>Seconds</div>
                         </li>
                     </ul>
@@ -51,8 +72,8 @@
     <section class="youth-forum">
         <div class="container forum-container">
             <div class="heading text-center">
-                <h4>The main objectives of the</h4>
-                <h3>4th Eastern Partnership <br>Youth Forum</h3>
+                <h4 class="title-h4">The main objectives of the</h4>
+                <h3 class="title-h3">4th Eastern Partnership <br>Youth Forum</h3>
             </div>
 
             <div class="content">
@@ -120,13 +141,150 @@
         </div>
     </section>
 
+    <!--    Count section-->
     <section class="count-wrap">
         <div class="count-container container">
-            <div class="row">
-                <div class="col-md-4"></div>
+            <div class="row count-row">
+                <div class="col-md-4 count-col text-center">
+                    <div class="count-item">
+                        <h2 class="light-font">250</h2>
+                        <b>participants</b>
+                        <p>including active young people, youth workers and youth policy makers from both Eastern
+                            Partnership</p>
+                    </div>
+                </div>
+                <div class="col-md-4 count-col text-center">
+                    <div class="count-item">
+                        <h2 class="light-font">34</h2>
+                        <b>countries</b>
+                        <p>European countries involved in the EU Erasmus+</p>
+                    </div>
+                </div>
+                <div class="col-md-4 count-col text-center">
+                    <div class="count-item">
+                        <h2 class="light-font">3</h2>
+                        <b>days</b>
+                        <p>Programme - will meet and discuss in a two-day event in Vilnius, on 17-20 June 2018.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!--    Big map-->
+    <section class="big-map">
+        <div class="bm-container">
+            <img src="<?php echo esc_url( get_template_directory_uri() )?>/assets/images/big-map.jpg" alt="">
+        </div>
+    </section>
+
+    <!--    Google map-->
+<!--    <section class="g-map">-->
+<!--        <div class="g-map-wrap">-->
+            <!--The div element for the map -->
+<!--            <div id="map"></div>-->
+<!--        </div>-->
+<!---->
+<!--    </section>-->
+
+    <!--    About forum-->
+    <section class="about-forum">
+        <div class="container af-container">
+            <div class="af-row row">
+                <div class="map-col col-lg-6">
+                    <div id="about-forum" class="forum-map"></div>
+                </div>
+                <div class="content-col col-lg-6">
+                    <div class="content">
+                        <h4 class="title-h4">About Forum</h4>
+                        <h3 class="title-mid">We all will meet in Vilnius on 17-20 June 2019!</h3>
+                        <p>
+                            The event will gather youth and youth work representatives, around 250
+                            participants: each EaP country with 10 delegates from youth, organizations and
+                            institutions working with youth, EaP Youth ambassadors network representatives, 34
+                            "Erasmus+" programme countries with 2 delegates per country, team of facilitators and
+                            experts, other European Union, Council of Europe, national agency and international youth
+                            organizations representatives.
+                        </p>
+                        <a href="#">Ezeraiciu km., Ezeraiciu g.2, Vilnius, Lietuva LT-14200</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    About Lithuania-->
+    <section class="about-lithuania gray-bg">
+        <div class="container af-container">
+            <div class="af-row row">
+                <div class="content-col col-lg-6">
+                    <div class="content">
+                        <h4 class="title-h4">About Lithuania</h4>
+                        <h3 class="title-mid">Lithuania is a country in Northern Europe</h3>
+                        <p>
+                            The official name of the country is the Republic of Lithuania. Lithuania
+                            is situated on the eastern shore of the Baltic Sea and borders Latvia on the north,
+                            Belarus on the east and south, and Poland and the Kaliningrad region of Russia on the
+                            southwest. The official language is Lithuania.
+                            Vilnius is the capital of Lithuania and its largest city. It is known for its baroque
+                            architecture, seen especially in its medieval old town.
+                        </p>
+                        <a href="#">Find out more  <i class="fa fa fa-long-arrow-right"></i></a>
+                    </div>
+
+                </div>
+                <div class="map-col col-lg-6">
+                    <div id="about-forum" class="forum-map"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Moderator -->
+    <section class="moderator">
+        <div class="container m-container text-center">
+            <h3 class="title-mid">Moderator and Facilitators</h3>
+            <div class="row m-row">
+                <div class="col-md-6 m-col mb-5">
+                    <div class="card-item">
+                        <div class="img-wrap">
+                            <div class="mask">
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png" alt="">
+                            </div>
+
+                            <img class="flag" src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male-flag.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Marcus Vrecer</h3>
+                            <span>Main moderator, Austria</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-col mb-5">
+                    <div class="card-item">
+                        <div class="img-wrap">
+                            <div class="mask">
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png" alt="">
+                            </div>
+                            <img class="flag" src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female-flag.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Marcus Vrecer</h3>
+                            <span>Main moderator, Austria</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
 </div>
 
 
