@@ -300,6 +300,96 @@
         </div>
     </section>
 
+    <!-- Organiser -->
+    <section class="organiser">
+        <div class="organiser-container container text-center">
+            <h3 class="title-black">Organisers</h3>
+            <div class="row m-row organiser-row align-items-center">
+                <div class="col-md-4 organiser-col">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-1.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 organiser-col">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-2.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 organiser-col">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-3.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners">
+        <div class="partners-container container text-center">
+            <h3 class="title-black">Partners</h3>
+            <div class="custom-row">
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-1.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-2.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-3.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-4.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-5.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-6.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-7.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-8.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-wrap">
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-9.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </div>
 

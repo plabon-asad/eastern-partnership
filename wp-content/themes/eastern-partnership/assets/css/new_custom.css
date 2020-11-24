@@ -272,21 +272,21 @@ ul.common-ul {
     position: absolute;
     content: '';
     z-index: -1;
-    background-image: url("../../assets/images/pattern-big.png");
-    background-repeat: no-repeat;
+    background-image: url(../../assets/images/pattern-big.png);
+    background-repeat: repeat-y;
     background-size: cover;
     background-position: center;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100px;
     width: 100%;
-    height: 35%;
+    height: 50%;
 }
 
 .m-container {
     position: relative;
     padding-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 180px;
 }
 
 .m-container h3 {
@@ -353,7 +353,36 @@ ul.common-ul {
     height: auto;
 }
 
+/* Organiser design */
+.organiser-container {
+    margin-bottom: 80px;
+}
 
+/* Partners */
+.custom-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    /*border: 1px solid tomato;*/
+}
+
+.partners {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #D7D7D7;
+    margin-bottom: 20px;
+}
+
+.custom-row .item {
+    margin: 20px;
+    /*border: 1px solid black;*/
+}
+
+.custom-row .item .img-wrap img {
+    max-width: 100%;
+}
 
 
 

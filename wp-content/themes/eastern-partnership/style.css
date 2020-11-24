@@ -93,6 +93,13 @@ body p {
 	font-size: 40px;
 	font-weight: bold;
 }
+
+.title-black {
+	color: #2C2E30;
+	font-size: 21px;
+	font-weight: bold;
+}
+
 .title-h4 {
 	color: #93B9FF;
 	font-size: 24px;
