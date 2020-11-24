@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <div class="h-250"></div>
+    <div class="h-200"></div>
     <section class="youth-forum">
         <div class="container forum-container">
             <div class="heading text-center">
@@ -78,7 +78,7 @@
 
             <div class="content">
                 <div class="row content-row">
-                    <div class="col-md-4 content-item">
+                    <div class="col-md-4 content-item mb-3">
                         <div class="img-wrap">
                             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img1.png"
                                  alt="">
@@ -88,7 +88,7 @@
                             highlight the impact and achievements;
                         </p>
                     </div>
-                    <div class="col-md-4 content-item">
+                    <div class="col-md-4 content-item mb-3">
                         <div class="img-wrap">
                             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img2.png"
                                  alt="">
@@ -99,7 +99,7 @@
                             recommendations to the Eastern Partnership Summit in 2020;
                         </p>
                     </div>
-                    <div class="col-md-4 content-item">
+                    <div class="col-md-4 content-item mb-3">
                         <div class="img-wrap">
                             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img3.png"
                                  alt="">
@@ -109,7 +109,7 @@
                             regions on the changing landscape of youth demands and youth policy;
                         </p>
                     </div>
-                    <div class="col content-item align-self-center">
+                    <div class="col content-item align-self-centerx mb-3">
                         <div class="img-wrap">
                             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img4.png"
                                  alt="">
@@ -120,7 +120,7 @@
                             and Eastern Partnership countries;
                         </p>
                     </div>
-                    <div class="col content-item align-self-center">
+                    <div class="col content-item align-self-centerx mb-3">
                         <div class="img-wrap">
                             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img5.png"
                                  alt="">
@@ -130,8 +130,6 @@
                             participation and inform the discussions of Eastern Partnership High level Summit in 2020.
                         </p>
                     </div>
-
-
                 </div>
             </div>
             <div class="end-forum">
@@ -389,6 +387,27 @@
             </div>
         </div>
     </section>
+
+    <!-- Partners -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="row align-items-center footer-row">
+                <div class="col-6 col-md-8 col-xl-9 f-left-col">
+                    <div class="copyright">© Lorem ipsum 2010 - 2019</div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 f-right-col">
+                    <ul class="common-ul f-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </div>

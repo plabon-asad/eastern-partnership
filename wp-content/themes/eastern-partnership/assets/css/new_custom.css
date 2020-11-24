@@ -4,7 +4,8 @@
     background-size: cover;
     background-position: center;
     background-color: #2f5bea;
-    min-height: 540px;
+    height: 540px;
+    position: relative;
 }
 
 .banner-content {
@@ -34,7 +35,7 @@ ul.common-ul {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 25px;
+    bottom: -100px;
 }
 
 .remaining-time .time-content {
@@ -128,6 +129,58 @@ ul.common-ul {
     display: none;
 }
 
+/* When the browser is at least 1400px and above */
+@media screen and (min-width: 1430px) {
+    .remaining-time .time-content {width: 60%}
+}
+
+@media screen and (max-width: 720px) {
+    .top-banner {
+        background-image: url(../../assets/images/slide-bg-sm.png);
+        background-position: center;
+        background-size: 70%;
+        height: 700px;
+    }
+
+    .remaining-time {
+        bottom: 30px;
+    }
+
+    .remaining-time .time-content {
+        width: 95%;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .remaining-time .time-content .title {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .time-content ul li time {
+        font-size: 50px;
+    }
+
+    .time-content ul li div {
+        font-size: 15px;
+    }
+
+    .banner-content h2 {
+        font-size: 40px;
+        padding: 115px 32px 0 32px;
+    }
+
+    .banner-content p {
+        margin-top: 20px;
+        padding: 0 115px;
+        font-size: 16px;
+    }
+
+    .h-200 {height: 70px;}
+    .title-h4 {font-size: 20px;}
+    .title-h3 {font-size: 35px;}
+}
+
 /* Youth Forum */
 .forum-container .heading {
     margin-bottom: 40px;
@@ -138,6 +191,21 @@ ul.common-ul {
 .content-item:nth-child(3) .img-wrap {background: #2e5bea;}
 .content-item:nth-child(4) .img-wrap {background: #c23138;}
 .content-item:nth-child(5) .img-wrap {background: #5ebaab;}
+
+/* When the browser is at least 1000px and above */
+@media screen and (min-width: 1000px) {
+    .content-item:nth-child(4) {padding-left: 100px;}
+    .content-item:nth-child(5) {padding-right: 100px}
+}
+
+/* When the browser is at least 750px and bellow */
+@media screen and (max-width: 750px) {
+    .content-item:nth-child(4), .content-item:nth-child(5) {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 
 .content-row .content-item .img-wrap {
     width: 100px;
@@ -372,7 +440,7 @@ ul.common-ul {
 .partners {
     padding-bottom: 60px;
     border-bottom: 1px solid #D7D7D7;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .custom-row .item {
@@ -384,5 +452,32 @@ ul.common-ul {
     max-width: 100%;
 }
 
+/* Footer design */
+.footer-container .row {
+    padding: 15px 0;
+}
+
+.footer-container .footer-row .f-left-col .copyright {
+    color: #2C2E30;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+ul.f-social li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+ul.f-social li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #2F5BEA;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 26px;
+    cursor: pointer;
+}
 
 
