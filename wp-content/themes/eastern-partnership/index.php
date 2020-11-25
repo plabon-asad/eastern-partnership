@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"
-            defer></script>
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"-->
+<!--            defer></script>-->
     <script>
         // Initialize and add the map
         function initMap() {
@@ -190,13 +190,13 @@
     <section class="about-forum">
         <div class="container af-container">
             <div class="af-row row">
-                <div class="map-col col-lg-6">
+                <div class="map-col col-lg-6 order-lg-1 order-md-2 mb-3">
                     <div id="about-forum" class="forum-map diamond-bg pattern-green">
                         <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
                              alt="">
                     </div>
                 </div>
-                <div class="content-col col-lg-6">
+                <div class="content-col col-lg-6 order-lg-2 order-md-1 mb-3">
                     <div class="content">
                         <h4 class="title-h4">About Forum</h4>
                         <h3 class="title-mid">We all will meet in Vilnius on 17-20 June 2019!</h3>
@@ -214,6 +214,18 @@
             </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+        $(function (){
+            // Create a media condition that targets viewports at least 768px wide
+            const mediaQuery = window.matchMedia( '( max-width: 960px )' )
+
+// Note the `matches` property
+            if ( mediaQuery.matches ) {
+                console.log('Media Query Matched!')
+            }
+        })
+    </script>
 
 
     <!--    About Lithuania-->
