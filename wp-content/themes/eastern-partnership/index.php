@@ -272,7 +272,7 @@
             <div class="moderator-bg"></div>
             <h3 class="title-mid">Moderators and Facilitators</h3>
             <div class="row m-row">
-                <div class="col-md-6 m-col mb-5">
+                <div class="col-md-6 m-col mb-4">
                     <div class="card-item">
                         <div class="img-wrap">
                             <div class="mask">
@@ -292,7 +292,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-col mb-5">
+                <div class="col-md-6 m-col mb-4">
                     <div class="card-item">
                         <div class="img-wrap">
                             <div class="mask">
@@ -323,19 +323,19 @@
         <div class="organiser-container container text-center">
             <h3 class="title-black">Organisers</h3>
             <div class="row m-row organiser-row align-items-center">
-                <div class="col-md-4 organiser-col">
+                <div class="col-md-4 organiser-col mb-4">
                     <div class="img-wrap">
                         <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-1.png"
                              alt="">
                     </div>
                 </div>
-                <div class="col-md-4 organiser-col">
+                <div class="col-md-4 organiser-col mb-4">
                     <div class="img-wrap">
                         <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-2.png"
                              alt="">
                     </div>
                 </div>
-                <div class="col-md-4 organiser-col">
+                <div class="col-md-4 organiser-col mb-4">
                     <div class="img-wrap">
                         <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-3.png"
                              alt="">
@@ -412,10 +412,10 @@
     <footer class="footer">
         <div class="footer-container container">
             <div class="row align-items-center footer-row">
-                <div class="col-6 col-md-8 col-xl-9 f-left-col">
+                <div class="col-7 col-md-8 col-xl-9 f-left-col">
                     <div class="copyright">© Lorem ipsum 2010 - 2019</div>
                 </div>
-                <div class="col-6 col-md-4 col-xl-3 f-right-col">
+                <div class="col-5 col-md-4 col-xl-3 f-right-col text-right">
                     <ul class="common-ul f-social">
                         <li>
                             <a href="#"><i class="fa fa-facebook"></i></a>

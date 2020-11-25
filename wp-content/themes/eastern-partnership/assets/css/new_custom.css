@@ -129,63 +129,11 @@ ul.common-ul {
     display: none;
 }
 
-/* When the browser is at least 1400px and above */
-@media screen and (min-width: 1430px) {
-    .remaining-time .time-content {width: 60%}
-}
-
-@media screen and (max-width: 720px) {
-    .top-banner {
-        background-image: url(../../assets/images/slide-bg-sm.png);
-        background-position: center;
-        background-size: 70%;
-        height: 700px;
-    }
-
-    .remaining-time {
-        bottom: 30px;
-    }
-
-    .remaining-time .time-content {
-        width: 95%;
-        height: 200px;
-        padding: 20px;
-    }
-
-    .remaining-time .time-content .title {
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
-
-    .time-content ul li time {
-        font-size: 50px;
-    }
-
-    .time-content ul li div {
-        font-size: 15px;
-    }
-
-    .banner-content h2 {
-        font-size: 40px;
-        padding: 115px 32px 0 32px;
-    }
-
-    .banner-content p {
-        margin-top: 20px;
-        padding: 0 115px;
-        font-size: 16px;
-    }
-
-    .h-200 {height: 70px;}
-    .title-h4 {font-size: 20px;}
-    .title-h3 {font-size: 35px;}
-    .end-forum {margin-top: 30px;}
-}
-
 /* Youth Forum */
 .forum-container {
     padding-bottom: 40px;
 }
+
 .forum-container .heading {
     margin-bottom: 40px;
 }
@@ -195,49 +143,6 @@ ul.common-ul {
 .content-item:nth-child(3) .img-wrap {background: #2e5bea;}
 .content-item:nth-child(4) .img-wrap {background: #c23138;}
 .content-item:nth-child(5) .img-wrap {background: #5ebaab;}
-
-/* When the browser is at least 1000px and above */
-@media screen and (min-width: 1000px) {
-    .content-item:nth-child(4) {padding-left: 200px;}
-    .content-item:nth-child(5) {padding-right: 200px}
-}
-
-/* When the browser is at least 750px and bellow */
-@media screen and (max-width: 750px) {
-    .content-item:nth-child(4), .content-item:nth-child(5) {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .count-container:before {
-        background-image: url(../../assets/images/l-triangle-sm.png) !important;
-    }
-    .count-container:after {
-        position: absolute;
-        content: '';
-        background-position: center;
-        z-index: -1;
-        background-image: url(../../assets/images/r-triangle-sm.png) !important;
-        width: 65px !important;
-        height: 80px !important;
-        right: 20px !important;
-        top: 220px !important;
-        background-size: 55% !important;
-        background-repeat: no-repeat !important;
-        transform: rotate(180deg);
-    }
-
-    .m-container a {display: inline !important;}
-    .m-container:after {
-        height: 85% !important;
-        background-size: 300% !important;
-    }
-
-    .left-triangle, .right-triangle {display: none}
-
-    .footer-container .row .f-right-col {text-align: center}
-}
 
 .content-row .content-item .img-wrap {
     width: 100px;
@@ -512,6 +417,12 @@ font-size: 16px;
     margin-bottom: 80px;
 }
 
+.organiser-col .img-wrap img {
+    max-width: 100%;
+    display: inline-block;
+    height: auto;
+}
+
 /* Partners */
 .custom-row {
     display: flex;
@@ -549,6 +460,10 @@ font-size: 16px;
     font-weight: bold;
 }
 
+
+
+ul.f-social li:last-child {margin-right: inherit;}
+
 ul.f-social li {
     display: inline-block;
     margin-right: 15px;
@@ -564,6 +479,169 @@ ul.f-social li a {
     border-radius: 50%;
     line-height: 26px;
     cursor: pointer;
+}
+
+
+
+/* Responsive design */
+
+/* Banner and Timer */
+@media screen and (min-width: 1430px) {
+    .remaining-time .time-content {width: 60%}
+}
+
+@media screen and (max-width: 720px) {
+    .top-banner {
+        background-image: url(../../assets/images/slide-bg-sm.png);
+        background-position: center;
+        background-size: 70%;
+        height: 700px;
+    }
+
+    .banner-content h2 {
+        font-size: 40px;
+        padding: 115px 32px 0 32px;
+    }
+
+    .banner-content p {
+        margin-top: 20px;
+        padding: 0 115px;
+        font-size: 16px;
+    }
+
+    .remaining-time {
+        bottom: 30px;
+    }
+
+    .remaining-time .time-content {
+        width: 95%;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .remaining-time .time-content .title {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .time-content ul li time {
+        font-size: 50px;
+    }
+
+    .time-content ul li div {
+        font-size: 15px;
+    }
+
+    .h-200 {height: 70px;}
+    .title-h4 {font-size: 20px;}
+    .title-h3 {font-size: 35px;}
+    .end-forum {margin-top: 30px;}
+}
+
+/* When the browser is at least 1000px and above */
+@media screen and (min-width: 1000px) {
+    .content-item:nth-child(4) {padding-left: 200px;}
+    .content-item:nth-child(5) {padding-right: 200px}
+}
+
+/* When the browser is at least 750px and bellow */
+@media screen and (max-width: 750px) {
+    .content-item:nth-child(4), .content-item:nth-child(5) {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .count-container:before {
+        background-image: url(../../assets/images/l-triangle-sm.png) !important;
+    }
+    .count-container:after {
+        position: absolute;
+        content: '';
+        background-position: center;
+        z-index: -1;
+        background-image: url(../../assets/images/r-triangle-sm.png) !important;
+        width: 65px !important;
+        height: 80px !important;
+        right: 20px !important;
+        top: 220px !important;
+        background-size: 55% !important;
+        background-repeat: no-repeat !important;
+        transform: rotate(180deg);
+    }
+
+    .m-container a {display: inline !important;}
+    .m-container:after {
+        height: 85% !important;
+        background-size: 300% !important;
+    }
+
+    .left-triangle, .right-triangle {display: none}
+}
+
+/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title-mid {color: red}
+
+    .m-col .card-item .img-wrap img.flag {
+        bottom: 25px;
+        right: 135px;
+    }
+
+    /*.footer-container .footer-row .f-right-col {text-align: right}*/
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .title-mid {color: greenyellow}
+
+    .left-triangle, .right-triangle {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .m-col .card-item .img-wrap img.flag {
+        bottom: 25px;
+        right: 135px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .title-mid {color: yellow}
+
+    .left-triangle, .right-triangle {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .m-col .card-item .img-wrap img.flag {
+        bottom: 5px;
+        right: 95px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .title-mid {color: gray}
+
+    .left-triangle, .right-triangle {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .title-mid {color: black}
+
+    .left-triangle, .right-triangle {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 

@@ -1,6 +1,6 @@
 /*
 Theme Name: Eastern Partnership
-Theme URI: https://github.com/plabon-asad
+Theme URI: https://eastern.codecube.com.bd/
 Author: Md. Asaduzzaman
 Author URI: https://github.com/plabon-asad
 Description: It developed by customize Twenty Seventeen Theme.
@@ -16,43 +16,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 Normalize
-2.0 Accessibility
-3.0 Alignments
-4.0 Clearings
-5.0 Typography
-6.0 Forms
-7.0 Formatting
-8.0 Lists
-9.0 Tables
-10.0 Links
-11.0 Featured Image Hover
-12.0 Navigation
-13.0 Layout
-   13.1 Header
-   13.2 Front Page
-   13.3 Regular Content
-   13.4 Posts
-   13.5 Pages
-   13.6 Footer
-14.0 Comments
-15.0 Widgets
-16.0 Media
-   16.1 Galleries
-17.0 Customizer
-18.0 SVGs Fallbacks
-19.0 Media Queries
-20.0 Print
---------------------------------------------------------------*/
-/*@font-face {*/
-/*	font-family: 'Roboto Mono', monospace;*/
-/*	src: url(fonts/roboto-mono-v12-latin-regular.woff2) format('woff2'),*/
-/*	url(fonts/roboto-mono-v12-latin-regular.woff) format('woff'),*/
-/*	url(fonts/roboto-mono-v12-latin-regular.ttf) format('truetype');*/
-/*}*/
 
 @font-face {
 	font-family: 'Aileron', Arial, sans-serif;
@@ -63,6 +26,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-family: 'Aileron', Arial, sans-serif;
 	src: url(assets/fonts/Aileron-Regular.otf) format('otf');
 }
+
 *{
 	box-sizing: border-box;
 }
@@ -101,6 +65,7 @@ body p {
 	color: #2C2E30;
 	font-size: 21px;
 	font-weight: bold;
+	margin-bottom: 25px;
 }
 
 .title-h4 {
@@ -121,99 +86,6 @@ a {
 
 i {vertical-align: middle}
 
-/* Responsive design */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-	.title-mid {color: red}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-	.title-mid {color: greenyellow}
-
-	.left-triangle, .right-triangle {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	.m-col .card-item .img-wrap img.flag {
-		bottom: 25px !important;
-		right: 135px !important;
-	}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	.title-mid {color: yellow}
-
-	.left-triangle, .right-triangle {
-		visibility: hidden;
-		opacity: 0;
-	}
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	.title-mid {color: gray}
-
-	.left-triangle, .right-triangle {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-	.title-mid {color: black}
-
-	.left-triangle, .right-triangle {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 500px) {
-	/*.title-mid {color: red}*/
-
-	/*.moderator-bg {*/
-	/*	background-size: 300% !important;*/
-	/*	top: 300px !important;*/
-	/*}*/
-
-}
-
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 730px) {
-	/*.title-mid {color: greenyellow}*/
-
-	/*.left-triangle, .right-triangle {*/
-	/*	visibility: hidden;*/
-	/*	opacity: 0;*/
-	/*}*/
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-	/*.title-mid {color: gray}*/
-
-	/*.left-triangle, .right-triangle {*/
-	/*	visibility: hidden;*/
-	/*	opacity: 0;*/
-	/*}*/
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-	/*.title-mid {color: black}*/
-
-	/*.left-triangle, .right-triangle {*/
-	/*	visibility: visible;*/
-	/*	opacity: 1;*/
-	/*}*/
-}
 
 
 
