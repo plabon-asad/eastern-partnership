@@ -63,6 +63,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-family: 'Aileron', Arial, sans-serif;
 	src: url(assets/fonts/Aileron-Regular.otf) format('otf');
 }
+*{
+	box-sizing: border-box;
+}
 
 html, body {
 	font-family: 'Aileron', Arial, sans-serif;
@@ -117,6 +120,100 @@ a {
 }
 
 i {vertical-align: middle}
+
+/* Responsive design */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.title-mid {color: red}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.title-mid {color: greenyellow}
+
+	.left-triangle, .right-triangle {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.m-col .card-item .img-wrap img.flag {
+		bottom: 25px !important;
+		right: 135px !important;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.title-mid {color: yellow}
+
+	.left-triangle, .right-triangle {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.title-mid {color: gray}
+
+	.left-triangle, .right-triangle {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.title-mid {color: black}
+
+	.left-triangle, .right-triangle {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 500px) {
+	/*.title-mid {color: red}*/
+
+	/*.moderator-bg {*/
+	/*	background-size: 300% !important;*/
+	/*	top: 300px !important;*/
+	/*}*/
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 730px) {
+	/*.title-mid {color: greenyellow}*/
+
+	/*.left-triangle, .right-triangle {*/
+	/*	visibility: hidden;*/
+	/*	opacity: 0;*/
+	/*}*/
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/*.title-mid {color: gray}*/
+
+	/*.left-triangle, .right-triangle {*/
+	/*	visibility: hidden;*/
+	/*	opacity: 0;*/
+	/*}*/
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	/*.title-mid {color: black}*/
+
+	/*.left-triangle, .right-triangle {*/
+	/*	visibility: visible;*/
+	/*	opacity: 1;*/
+	/*}*/
+}
 
 
 

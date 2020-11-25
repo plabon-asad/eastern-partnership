@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
 
 
@@ -190,13 +192,13 @@
     <section class="about-forum">
         <div class="container af-container">
             <div class="af-row row">
-                <div class="map-col col-lg-6 order-lg-1 order-md-2 mb-3">
+                <div class="map-col col-lg-6 order-lg-1 order-md-2 order-sm-2 mb-3">
                     <div id="about-forum" class="forum-map diamond-bg pattern-green">
                         <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
                              alt="">
                     </div>
                 </div>
-                <div class="content-col col-lg-6 order-lg-2 order-md-1 mb-3">
+                <div class="content-col col-lg-6 order-lg-2 order-md-1 order-sm-1 mb-3">
                     <div class="content">
                         <h4 class="title-h4">About Forum</h4>
                         <h3 class="title-mid">We all will meet in Vilnius on 17-20 June 2019!</h3>
@@ -263,9 +265,12 @@
     </section>
 
     <!-- Moderator -->
-    <section class="moderator">
+    <section class="moderator" style="position:relative;">
+        <div class="left-triangle"></div>
+        <div class="right-triangle"></div>
         <div class="container m-container text-center">
-            <h3 class="title-mid">Moderator and Facilitators</h3>
+            <div class="moderator-bg"></div>
+            <h3 class="title-mid">Moderators and Facilitators</h3>
             <div class="row m-row">
                 <div class="col-md-6 m-col mb-5">
                     <div class="card-item">
@@ -307,6 +312,9 @@
                 </div>
             </div>
 
+            <a href="#">Check all facilitators <i class="fa fa fa-long-arrow-right"></i></a>
+
+            <div class="moderator-bg"></div>
         </div>
     </section>
 
