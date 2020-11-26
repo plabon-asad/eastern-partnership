@@ -314,12 +314,14 @@
         <div class="container text-center pb-5 mt-5">
             <h4 class="title-h4 pt-5">About Lithuania</h4>
             <h3 class="title-mid mb-5">Lithuania is a country in Northern Europe</h3>
-            <div class="img-wrap mb-4">
+
+            <div class="map-pattern-blue mb-4">
                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/country-img.png"
                      alt="">
                 <a class="play-btn" href="#"><i class="fa fa-play"></i></a>
-                <div class="pattern-bluex"></div>
             </div>
+
+
             <div class="content text-left">
                 <p>
                     The official name of the country is the Republic of Lithuania. Lithuania

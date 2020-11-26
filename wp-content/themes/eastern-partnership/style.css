@@ -90,6 +90,26 @@ img {
 	height: auto;
 }
 
+.play-btn i {
+	padding-left: 10px;
+}
+.play-btn {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	background-color: #2F5BEA;
+	color: white;
+	font-size: 40px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+	line-height: 90px;
+	text-align: center;
+}
+
 
 /* Test code */
 /*.media-test {}*/

@@ -251,6 +251,8 @@ ul.common-ul {
 .map-pattern-green img {
     width: 90%;
     height: auto;
+    z-index: 10;
+    display: inline-block;
 }
 
 .map-pattern-green:before {
@@ -264,6 +266,33 @@ ul.common-ul {
     right: 0;
     bottom: -35px;
     top: 30px;
+    z-index: -1;
+}
+
+.map-pattern-blue {
+    position: relative;
+    z-index: 1;
+}
+
+.map-pattern-blue img {
+    width: 90%;
+    height: auto;
+    z-index: 100;
+    display: inline-block;
+}
+
+.map-pattern-blue:before {
+    background-image: url("../../assets/images/pattern-b.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    top: 30px;
+    z-index: -1;
 }
 
 .forum-map {
@@ -317,6 +346,11 @@ ul.common-ul {
 
 .content-col {
     padding-left: 50px;
+}
+
+/* About Lithuania */
+#about-lithuania-mv .container .content {
+    margin-top: 70px;
 }
 
 /* Moderator design */
