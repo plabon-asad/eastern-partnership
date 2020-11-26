@@ -14,34 +14,36 @@
     <meta property="og:title" content="Eastern Partnership - New Business Platform of Soft IT"/>
     <meta property="og:description"
           content="Eastern Partnership - Brand New Soft Tech Farm"/>
-    <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() )?>/assets/images/screenshot.png"/>
+    <meta property="og:image"
+          content="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/screenshot.png"/>
     <meta property="og:url" content="http://eastern.codecube.com.bd/"/>
-    <link rel="shortcut icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() )?>/eastern-enterprise.ico"/>
+    <link rel="shortcut icon" type="image/png"
+          href="<?php echo esc_url(get_template_directory_uri()) ?>/eastern-enterprise.ico"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"-->
-<!--            defer></script>-->
-<!--    <script>-->
-<!--        // Initialize and add the map-->
-<!--        function initMap() {-->
-<!--            // The location of Uluru-->
-<!--            const uluru = {lat: 56.263920, lng: 9.501785};-->
-<!--            // The map, centered at Uluru-->
-<!--            const map = new google.maps.Map(document.getElementById("map"), {-->
-<!--                zoom: 5,-->
-<!--                center: uluru,-->
-<!---->
-<!--            });-->
-<!--            // The marker, positioned at Uluru-->
-<!--            const marker = new google.maps.Marker({-->
-<!--                position: uluru,-->
-<!--                map: map,-->
-<!--            });-->
-<!--        }-->
-<!--    </script>-->
+    <!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"-->
+    <!--            defer></script>-->
+    <!--    <script>-->
+    <!--        // Initialize and add the map-->
+    <!--        function initMap() {-->
+    <!--            // The location of Uluru-->
+    <!--            const uluru = {lat: 56.263920, lng: 9.501785};-->
+    <!--            // The map, centered at Uluru-->
+    <!--            const map = new google.maps.Map(document.getElementById("map"), {-->
+    <!--                zoom: 5,-->
+    <!--                center: uluru,-->
+    <!---->
+    <!--            });-->
+    <!--            // The marker, positioned at Uluru-->
+    <!--            const marker = new google.maps.Marker({-->
+    <!--                position: uluru,-->
+    <!--                map: map,-->
+    <!--            });-->
+    <!--        }-->
+    <!--    </script>-->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -80,7 +82,7 @@
             </div>
 
             <script>
-                $(function (){
+                $(function () {
 
                 })
             </script>
@@ -255,33 +257,33 @@
         </div>
     </section>
 
-<!--    <script type="text/javascript">-->
-<!--        $(function () {-->
-<!--            /* JavaScript Media Queries */-->
-<!--            if (matchMedia) {-->
-<!--                const mq = window.matchMedia("(max-width: 990px)");-->
-<!--                mq.addListener(WidthChange);-->
-<!--                WidthChange(mq);-->
-<!--            }-->
-<!---->
-<!--            // media query change-->
-<!--            function WidthChange(mq) {-->
-<!--                if (mq.matches) {-->
-<!--                    // window width is at least 500px-->
-<!--                    alert(mq.media)-->
-<!---->
-<!--                    let box = $('#about-forum-row')-->
-<!--                    console.log(box)-->
-<!---->
-<!--                } else {-->
-<!--                    alert('No match');-->
-<!--                    // window width is less than 500px-->
-<!--                }-->
-<!---->
-<!--            }-->
-<!--            -->
-<!--        })-->
-<!--    </script>-->
+    <!--    <script type="text/javascript">-->
+    <!--        $(function () {-->
+    <!--            /* JavaScript Media Queries */-->
+    <!--            if (matchMedia) {-->
+    <!--                const mq = window.matchMedia("(max-width: 990px)");-->
+    <!--                mq.addListener(WidthChange);-->
+    <!--                WidthChange(mq);-->
+    <!--            }-->
+    <!---->
+    <!--            // media query change-->
+    <!--            function WidthChange(mq) {-->
+    <!--                if (mq.matches) {-->
+    <!--                    // window width is at least 500px-->
+    <!--                    alert(mq.media)-->
+    <!---->
+    <!--                    let box = $('#about-forum-row')-->
+    <!--                    console.log(box)-->
+    <!---->
+    <!--                } else {-->
+    <!--                    alert('No match');-->
+    <!--                    // window width is less than 500px-->
+    <!--                }-->
+    <!---->
+    <!--            }-->
+    <!--            -->
+    <!--        })-->
+    <!--    </script>-->
 
 
     <!--    About Lithuania mobile view-->
@@ -394,7 +396,7 @@
 
             <a href="#">Check all facilitators <i class="fa fa fa-long-arrow-right"></i></a>
 
-            <div class="moderator-bg"></div>
+            <!--            <div class="moderator-bg"></div>-->
         </div>
     </section>
 
