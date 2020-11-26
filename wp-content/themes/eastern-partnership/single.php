@@ -12,22 +12,27 @@
 
 get_header(); ?>
 
-<?php
-// Start the Loop.
-while (have_posts()) :
-    the_post();
+    <div class="container post-container text-center">
+        <?php while (have_posts()) : ?>
+            <?php the_post(); ?>
 
-    get_template_part('template-parts/post/content', get_post_format());
+            <h3><?php the_title(); ?></h3>
+            <h4><?php echo get_the_content(); ?></h4>
 
-    the_post_navigation(
-        array(
-            'prev_text' => '<span class="screen-reader-text">' . __('Previous Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Previous', 'twentyseventeen') . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg(array('icon' => 'arrow-left')) . '</span>%title</span>',
-            'next_text' => '<span class="screen-reader-text">' . __('Next Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Next', 'twentyseventeen') . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg(array('icon' => 'arrow-right')) . '</span></span>',
-        )
-    );
+            <?php get_template_part('template-parts/post/content', get_post_format()); ?>
+            <?php
+//            the_post_navigation(
+//                array(
+//                    'prev_text' => '<span class="screen-reader-text">' . __('Previous Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Previous', 'twentyseventeen') . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . '</span>%title</span>',
+//                    'next_text' => '<span class="screen-reader-text">' . __('Next Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Next', 'twentyseventeen') . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . '</span></span>',
+//                )
+//            );
+            ?>
 
-endwhile; // End the loop.
-?>
+        <?php endwhile; ?>
+
+
+    </div>
 
 <?php
 get_footer();
