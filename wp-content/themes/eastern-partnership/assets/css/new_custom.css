@@ -243,6 +243,29 @@ ul.common-ul {
 }
 
 /* About forum */
+
+#about-forum-mv .container .content {
+    margin-top: 70px;
+}
+
+.map-pattern-green img {
+    width: 90%;
+    height: auto;
+}
+
+.map-pattern-green:before {
+    background-image: url("../../assets/images/pattern-g.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    top: 30px;
+}
+
 .forum-map {
     position: relative;
     z-index: 1;
@@ -460,8 +483,6 @@ font-size: 16px;
     font-weight: bold;
 }
 
-
-
 ul.f-social li:last-child {margin-right: inherit;}
 
 ul.f-social li {
@@ -480,6 +501,9 @@ ul.f-social li a {
     line-height: 26px;
     cursor: pointer;
 }
+
+/* About forum */
+#about-forum-mv, #about-lithuania-mv {display: none;}
 
 
 
@@ -541,7 +565,7 @@ ul.f-social li a {
 /* When the browser is at least 1000px and above */
 @media screen and (min-width: 1000px) {
     .content-item:nth-child(4) {padding-left: 200px;}
-    .content-item:nth-child(5) {padding-right: 200px}
+    .content-item:nth-child(5) {padding-right: 200px;}
 }
 
 /* When the browser is at least 750px and bellow */
@@ -576,7 +600,7 @@ ul.f-social li a {
         background-size: 300% !important;
     }
 
-    .left-triangle, .right-triangle {display: none}
+    .left-triangle, .right-triangle {display: none;}
 }
 
 /* Breakpoints */
@@ -589,7 +613,9 @@ ul.f-social li a {
         right: 135px;
     }
 
-    /*.footer-container .footer-row .f-right-col {text-align: right}*/
+    #about-forum-mv, #about-lithuania-mv {display: block;}
+    #about-forum-lg, #about-lithuania-lg {display: none;}
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -605,11 +631,14 @@ ul.f-social li a {
         bottom: 25px;
         right: 135px;
     }
+
+    #about-forum-mv, #about-lithuania-mv {display: block;}
+    #about-forum-lg, #about-lithuania-lg {display: none;}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .title-mid {color: yellow}
+    .title-mid {color: tomato}
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -620,6 +649,9 @@ ul.f-social li a {
         bottom: 5px;
         right: 95px;
     }
+
+    #about-forum-lg, #about-lithuania-lg {display: none;}
+    #about-forum-mv, #about-lithuania-mv {display: block;}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -630,6 +662,13 @@ ul.f-social li a {
         visibility: hidden;
         opacity: 0;
     }
+
+    .title-h4 {font-size: 22px;}
+    .title-mid {font-size: 30px;}
+
+    #about-forum-mv, #about-lithuania-mv {display: none;}
+    #about-forum-lg, #about-lithuania-lg {display: block;}
+
 
 
 }
@@ -642,6 +681,13 @@ ul.f-social li a {
         visibility: visible;
         opacity: 1;
     }
+
+    .title-h4 {font-size: 24px;}
+    .title-mid {font-size: 40px;}
+
+    #about-forum-mv, #about-lithuania-mv {display: none;}
+    #about-forum-lg, #about-lithuania-lg {display: block;}
+
 }
 
 
