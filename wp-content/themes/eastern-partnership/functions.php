@@ -34,6 +34,50 @@ function my_function_admin_bar(){ return false; }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
 
+/**
+ * Top banner post dynamic
+ */
+add_action('init', 'banner_post_type');
+function banner_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Banner', 'Top Banner type post', 'textdomain' ),
+        'singular_name'         => _x( 'Banner Item', 'Banner type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Banner', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Banner', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Banner', 'textdomain' ),
+        'new_item'              => __( 'New Banner', 'textdomain' ),
+        'edit_item'             => __( 'Edit Banner', 'textdomain' ),
+        'view_item'             => __( 'View Banner', 'textdomain' ),
+        'all_items'             => __( 'All Banner', 'textdomain' ),
+        'search_items'          => __( 'Search Banner', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Banner:', 'textdomain' ),
+        'not_found'             => __( 'No Banner found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Banner found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Banner Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Banner image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Banner image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Banner image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Banner archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'banner' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
+    );
+    register_post_type('banner', $args);
+}
+
 
 
 

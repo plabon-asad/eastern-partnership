@@ -25,5 +25,6 @@ wp-content/themes/twenty*/
 .idea
 wp-config.php
 .htaccess
+wp-content/uploads/
 
 
