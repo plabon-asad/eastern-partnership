@@ -110,65 +110,14 @@ img {
 	text-align: center;
 }
 
+.play-btn:hover, .play-btn:focus {
+	cursor: pointer;
+	background-color: #2f5beac4;
+	color: white;
+	/*font-size: 35px;*/
+	transition: background-color .5s ease-out;
 
-/* Test code */
-/*.media-test {}*/
+}
 
-/*#page*/
-/*{*/
-/*	min-width: 200px;*/
-/*	height: 100%;*/
-/*	padding: 20px 30px;*/
-/*	margin: 0 auto;*/
-/*	background-color: #fff;*/
-/*	border: 1px solid #999;*/
-/*}*/
-
-/*section*/
-/*{*/
-/*	width: 100%;*/
-/*	margin-bottom: 3em;*/
-/*}*/
-
-/*div.element*/
-/*{*/
-/*	text-align: center;*/
-/*	padding: 10px 0;*/
-/*	margin: 4px;*/
-/*	background-color: #dfd;*/
-/*	border: 2px solid #666;*/
-/*}*/
-
-
-/*strong*/
-/*{*/
-/*	color: #c00;*/
-/*}*/
-
-/*@media all and (min-width: 500px) {*/
-/*	body*/
-/*	{*/
-/*		background-color: #ddf;*/
-/*	}*/
-
-/*	#page*/
-/*	{*/
-/*		max-width: 600px;*/
-/*	}*/
-
-/*	section:after {*/
-/*		content: "";*/
-/*		display: table;*/
-/*		clear: both;*/
-/*	}*/
-
-/*	div.element*/
-/*	{*/
-/*		float: left;*/
-/*		width: 30%;*/
-/*		padding: 30px 0;*/
-/*		background-color: #ddf;*/
-/*	}*/
-/*}*/
 
 

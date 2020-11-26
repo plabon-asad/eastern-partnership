@@ -138,11 +138,25 @@ ul.common-ul {
     margin-bottom: 40px;
 }
 
-.content-item:nth-child(1) .img-wrap {background: #f2f1ff;}
-.content-item:nth-child(2) .img-wrap {background: #fcb72e;}
-.content-item:nth-child(3) .img-wrap {background: #2e5bea;}
-.content-item:nth-child(4) .img-wrap {background: #c23138;}
-.content-item:nth-child(5) .img-wrap {background: #5ebaab;}
+.content-item:nth-child(1) .img-wrap {
+    background: #f2f1ff;
+}
+
+.content-item:nth-child(2) .img-wrap {
+    background: #fcb72e;
+}
+
+.content-item:nth-child(3) .img-wrap {
+    background: #2e5bea;
+}
+
+.content-item:nth-child(4) .img-wrap {
+    background: #c23138;
+}
+
+.content-item:nth-child(5) .img-wrap {
+    background: #5ebaab;
+}
 
 .content-row .content-item .img-wrap {
     width: 100px;
@@ -185,8 +199,13 @@ ul.common-ul {
 }
 
 /* Count section design */
-.count-wrap {position: relative;}
-.count-container {padding-top: 100px;}
+.count-wrap {
+    position: relative;
+}
+
+.count-container {
+    padding-top: 100px;
+}
 
 .count-container:before {
     background-image: url(../../assets/images/l-triangle.png);
@@ -243,7 +262,6 @@ ul.common-ul {
 }
 
 /* About forum */
-
 #about-forum-mv .container .content {
     margin-top: 70px;
 }
@@ -376,53 +394,55 @@ ul.common-ul {
 }
 
 .left-triangle {
-position: absolute;
-content: '';
-background-image: url(../../assets/images/l-mod-triangle.png);
-background-repeat: no-repeat;
-background-size: 90%;
-background-position: center;
-top: -10%;
-left: 80px;
-width: 350px;
-height: 350px;
-z-index: 1;
+    position: absolute;
+    content: '';
+    background-image: url(../../assets/images/l-mod-triangle.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    top: -10%;
+    left: 80px;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
 }
 
 .right-triangle {
-background-image: url(../../assets/images/r-mod-triangle.png);
-position: absolute;
-content: '';
-background-repeat: no-repeat;
-background-size: 90%;
-background-position: center;
-top: -11%;
-right: 80px;
-width: 200px;
-height: 500px;
-z-index: 1;
+    background-image: url(../../assets/images/r-mod-triangle.png);
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    top: -11%;
+    right: 80px;
+    width: 200px;
+    height: 500px;
+    z-index: 1;
 }
 
-.m-container a {display: none}
+.m-container a {
+    display: none
+}
 
 .m-container h3 {
-margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .m-row {
-max-width: 800px;
-margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .m-col .card-item {
-border: 1px solid #eee;
-border-radius: 5px;
-padding: 40px 0 70px 0;
-box-shadow: 0px 2px 5px 0px rgb(0 0 0 /5%);
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 40px 0 70px 0;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 /5%);
 }
 
 .m-col .card-item .img-wrap {
-position: relative;
+    position: relative;
 }
 
 .m-col .card-item .img-wrap .mask {
@@ -439,24 +459,24 @@ position: relative;
 }
 
 .m-col .card-item .img-wrap img.flag {
-width: 42px;
-position: absolute;
-bottom: 5px;
-right: 95px;
+    width: 42px;
+    position: absolute;
+    bottom: 5px;
+    right: 95px;
 
 }
 
 .m-col .card-item .content h3 {
-color: #2C2E30;
-font-weight: normal;
-margin-bottom: 5px;
-margin-top: 40px;
-font-size: 28px;
+    color: #2C2E30;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    font-size: 28px;
 }
 
 .m-col .card-item .content span {
-color: #7E8085;
-font-size: 16px;
+    color: #7E8085;
+    font-size: 16px;
 }
 
 /* Big map design */
@@ -517,7 +537,9 @@ font-size: 16px;
     font-weight: bold;
 }
 
-ul.f-social li:last-child {margin-right: inherit;}
+ul.f-social li:last-child {
+    margin-right: inherit;
+}
 
 ul.f-social li {
     display: inline-block;
@@ -537,15 +559,18 @@ ul.f-social li a {
 }
 
 /* About forum */
-#about-forum-mv, #about-lithuania-mv {display: none;}
-
+#about-forum-mv, #about-lithuania-mv {
+    display: none;
+}
 
 
 /* Responsive design */
 
 /* Banner and Timer */
 @media screen and (min-width: 1430px) {
-    .remaining-time .time-content {width: 60%}
+    .remaining-time .time-content {
+        width: 60%
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -590,16 +615,32 @@ ul.f-social li a {
         font-size: 15px;
     }
 
-    .h-200 {height: 70px;}
-    .title-h4 {font-size: 20px;}
-    .title-h3 {font-size: 35px;}
-    .end-forum {margin-top: 30px;}
+    .h-200 {
+        height: 70px;
+    }
+
+    .title-h4 {
+        font-size: 20px;
+    }
+
+    .title-h3 {
+        font-size: 35px;
+    }
+
+    .end-forum {
+        margin-top: 30px;
+    }
 }
 
 /* When the browser is at least 1000px and above */
 @media screen and (min-width: 1000px) {
-    .content-item:nth-child(4) {padding-left: 200px;}
-    .content-item:nth-child(5) {padding-right: 200px;}
+    .content-item:nth-child(4) {
+        padding-left: 200px;
+    }
+
+    .content-item:nth-child(5) {
+        padding-right: 200px;
+    }
 }
 
 /* When the browser is at least 750px and bellow */
@@ -613,6 +654,7 @@ ul.f-social li a {
     .count-container:before {
         background-image: url(../../assets/images/l-triangle-sm.png) !important;
     }
+
     .count-container:after {
         position: absolute;
         content: '';
@@ -628,33 +670,47 @@ ul.f-social li a {
         transform: rotate(180deg);
     }
 
-    .m-container a {display: inline !important;}
+    .m-container a {
+        display: inline !important;
+    }
+
     .m-container:after {
         height: 85% !important;
         background-size: 300% !important;
     }
 
-    .left-triangle, .right-triangle {display: none;}
+    .left-triangle, .right-triangle {
+        display: none;
+    }
 }
 
 /* Breakpoints */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .title-mid {color: red}
+    /*.title-mid {*/
+    /*    color: red*/
+    /*}*/
 
     .m-col .card-item .img-wrap img.flag {
         bottom: 25px;
         right: 135px;
     }
 
-    #about-forum-mv, #about-lithuania-mv {display: block;}
-    #about-forum-lg, #about-lithuania-lg {display: none;}
+    #about-forum-mv, #about-lithuania-mv {
+        display: block;
+    }
+
+    #about-forum-lg, #about-lithuania-lg {
+        display: none;
+    }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .title-mid {color: greenyellow}
+    /*.title-mid {*/
+    /*    color: greenyellow*/
+    /*}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -666,13 +722,20 @@ ul.f-social li a {
         right: 135px;
     }
 
-    #about-forum-mv, #about-lithuania-mv {display: block;}
-    #about-forum-lg, #about-lithuania-lg {display: none;}
+    #about-forum-mv, #about-lithuania-mv {
+        display: block;
+    }
+
+    #about-forum-lg, #about-lithuania-lg {
+        display: none;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .title-mid {color: tomato}
+    /*.title-mid {*/
+    /*    color: tomato*/
+    /*}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -684,43 +747,69 @@ ul.f-social li a {
         right: 95px;
     }
 
-    #about-forum-lg, #about-lithuania-lg {display: none;}
-    #about-forum-mv, #about-lithuania-mv {display: block;}
+    #about-forum-lg, #about-lithuania-lg {
+        display: none;
+    }
+
+    #about-forum-mv, #about-lithuania-mv {
+        display: block;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .title-mid {color: gray}
+    /*.title-mid {*/
+    /*    color: gray*/
+    /*}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
         opacity: 0;
     }
 
-    .title-h4 {font-size: 22px;}
-    .title-mid {font-size: 30px;}
+    .title-h4 {
+        font-size: 22px;
+    }
 
-    #about-forum-mv, #about-lithuania-mv {display: none;}
-    #about-forum-lg, #about-lithuania-lg {display: block;}
+    .title-mid {
+        font-size: 30px;
+    }
 
+    #about-forum-mv, #about-lithuania-mv {
+        display: none;
+    }
 
-
+    #about-forum-lg, #about-lithuania-lg {
+        display: block;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .title-mid {color: black}
+    /*.title-mid {*/
+    /*    color: black*/
+    /*}*/
 
     .left-triangle, .right-triangle {
         visibility: visible;
         opacity: 1;
     }
 
-    .title-h4 {font-size: 24px;}
-    .title-mid {font-size: 40px;}
+    .title-h4 {
+        font-size: 24px;
+    }
 
-    #about-forum-mv, #about-lithuania-mv {display: none;}
-    #about-forum-lg, #about-lithuania-lg {display: block;}
+    .title-mid {
+        font-size: 40px;
+    }
+
+    #about-forum-mv, #about-lithuania-mv {
+        display: none;
+    }
+
+    #about-forum-lg, #about-lithuania-lg {
+        display: block;
+    }
 
 }
 

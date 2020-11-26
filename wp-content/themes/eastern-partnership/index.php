@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--    <title>--><?php //the_title() || 'Eastern Partnership'; ?><!--</title>-->
+    <!-- SEO Content -->
+    <meta name="description"
+          content="Eastern Partnership | I am developing this site for Viba faced."/>
+    <meta name="keywords"
+          content="Eastern Partnership, Plabon Asad, Web development, Wordpress, JavaScript, Ruby on Rails"/>
+    <meta name="author" content="Plabon Asad"/>
 
+    <meta property="og:title" content="Eastern Partnership - New Business Platform of Soft IT"/>
+    <meta property="og:description"
+          content="Eastern Partnership - Brand New Soft Tech Farm"/>
+    <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() )?>/assets/images/screenshot.png"/>
+    <meta property="og:url" content="http://eastern.codecube.com.bd/"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() )?>/eastern-enterprise.ico"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -13,24 +24,24 @@
 
 <!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"-->
 <!--            defer></script>-->
-    <script>
-        // Initialize and add the map
-        function initMap() {
-            // The location of Uluru
-            const uluru = {lat: 56.263920, lng: 9.501785};
-            // The map, centered at Uluru
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 5,
-                center: uluru,
-
-            });
-            // The marker, positioned at Uluru
-            const marker = new google.maps.Marker({
-                position: uluru,
-                map: map,
-            });
-        }
-    </script>
+<!--    <script>-->
+<!--        // Initialize and add the map-->
+<!--        function initMap() {-->
+<!--            // The location of Uluru-->
+<!--            const uluru = {lat: 56.263920, lng: 9.501785};-->
+<!--            // The map, centered at Uluru-->
+<!--            const map = new google.maps.Map(document.getElementById("map"), {-->
+<!--                zoom: 5,-->
+<!--                center: uluru,-->
+<!---->
+<!--            });-->
+<!--            // The marker, positioned at Uluru-->
+<!--            const marker = new google.maps.Marker({-->
+<!--                position: uluru,-->
+<!--                map: map,-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -202,7 +213,6 @@
             <div class="map-pattern-green mb-4" style="position: relative">
                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
                      alt="">
-<!--                <div class="pattern-green"></div>-->
             </div>
             <div class="content text-left">
                 <p>
@@ -245,22 +255,6 @@
         </div>
     </section>
 
-<!--    <div class="media-test" style="background-color: #0c88b4">-->
-<!--        <div id="page">-->
-<!--            <h1>JavaScript Media Queries</h1>-->
-<!---->
-<!--            <p>Current design: <strong id="current">unknown</strong></p>-->
-<!---->
-<!--            <section>-->
-<!--                <div class="element">element one</div>-->
-<!--                <div class="element">element two</div>-->
-<!--                <div class="element">element three</div>-->
-<!--            </section>-->
-<!---->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-
 <!--    <script type="text/javascript">-->
 <!--        $(function () {-->
 <!--            /* JavaScript Media Queries */-->
@@ -277,34 +271,15 @@
 <!--                    alert(mq.media)-->
 <!---->
 <!--                    let box = $('#about-forum-row')-->
-<!---->
-<!---->
-<!--                    let title = box.find('.title-mid')-->
-<!--                    let sub_title = box.find('.title-h4')-->
-<!--                    let para = box.find('p')-->
-<!--                    let link = box.find('a')-->
-<!--                    console.log(title)-->
+<!--                    console.log(box)-->
 <!---->
 <!--                } else {-->
 <!--                    alert('No match');-->
 <!--                    // window width is less than 500px-->
 <!--                }-->
 <!---->
-<!--                // const msg = (mq.matches ? "more" : "less") + " than 500 pixels";-->
-<!--                // document.getElementById("current").firstChild.nodeValue = msg;-->
-<!---->
 <!--            }-->
-<!---->
-<!---->
-<!---->
-<!--            // Create a media condition that targets viewports at least 768px wide-->
-<!--            const mediaQuery = window.matchMedia('( max-width: 990px )')-->
-<!---->
-<!--            // Note the `matches` property-->
-<!--            if (mediaQuery.matches) {-->
-<!--                console.log(mediaQuery);-->
-<!--                let af_row = $('')-->
-<!--            }-->
+<!--            -->
 <!--        })-->
 <!--    </script>-->
 
