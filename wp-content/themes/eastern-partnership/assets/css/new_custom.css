@@ -563,6 +563,11 @@ ul.f-social li a {
     display: none;
 }
 
+/* 404 page */
+.not-found-container {
+    height: calc(100vh - 120px);
+    margin-top: 60px;
+}
 
 /* Responsive design */
 

@@ -1,54 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php get_header(); ?>
 
-    <!-- SEO Content -->
-    <meta name="description"
-          content="Eastern Partnership | I am developing this site for Viba faced."/>
-    <meta name="keywords"
-          content="Eastern Partnership, Plabon Asad, Web development, Wordpress, JavaScript, Ruby on Rails"/>
-    <meta name="author" content="Plabon Asad"/>
 
-    <meta property="og:title" content="Eastern Partnership - New Business Platform of Soft IT"/>
-    <meta property="og:description"
-          content="Eastern Partnership - Brand New Soft Tech Farm"/>
-    <meta property="og:image"
-          content="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/screenshot.png"/>
-    <meta property="og:url" content="http://eastern.codecube.com.bd/"/>
-    <link rel="shortcut icon" type="image/png"
-          href="<?php echo esc_url(get_template_directory_uri()) ?>/eastern-enterprise.ico"/>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap&libraries=&v=weekly"-->
-    <!--            defer></script>-->
-    <!--    <script>-->
-    <!--        // Initialize and add the map-->
-    <!--        function initMap() {-->
-    <!--            // The location of Uluru-->
-    <!--            const uluru = {lat: 56.263920, lng: 9.501785};-->
-    <!--            // The map, centered at Uluru-->
-    <!--            const map = new google.maps.Map(document.getElementById("map"), {-->
-    <!--                zoom: 5,-->
-    <!--                center: uluru,-->
-    <!---->
-    <!--            });-->
-    <!--            // The marker, positioned at Uluru-->
-    <!--            const marker = new google.maps.Marker({-->
-    <!--                position: uluru,-->
-    <!--                map: map,-->
-    <!--            });-->
-    <!--        }-->
-    <!--    </script>-->
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?> >
-
-<div class="main-wrap">
     <section class="top-banner">
         <div class="container banner-container text-center">
             <div class="banner-content">
@@ -490,47 +442,6 @@
         </div>
     </section>
 
-    <!-- Partners -->
-    <footer class="footer">
-        <div class="footer-container container">
-            <div class="row align-items-center footer-row">
-                <div class="col-7 col-md-8 col-xl-9 f-left-col">
-                    <div class="copyright">© Lorem ipsum 2010 - 2019</div>
-                </div>
-                <div class="col-5 col-md-4 col-xl-3 f-right-col text-right">
-                    <ul class="common-ul f-social">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-
-</div>
-
-
-<?php
-//if (have_posts()) :
-//
-//    // Start the Loop.
-//    while (have_posts()) :
-//        the_post();
-//        get_template_part('template-parts/post/content', get_post_format());
-//
-//    endwhile;
-//
-//else :
-//
-//    get_template_part('template-parts/post/content', 'none');
-//
-//endif;
-//?>
-</body>
-</html>
+    <?php get_footer(); ?>
 
