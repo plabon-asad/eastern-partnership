@@ -399,7 +399,7 @@
                     <div class="card-item">
                         <div class="img-wrap">
                             <div class="mask">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png"
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female.png"
                                      alt="">
                             </div>
                             <img class="flag"
