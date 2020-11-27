@@ -66,65 +66,17 @@
 
                     $objectives = new WP_Query($obj_args) ?>
                     <?php while ( $objectives->have_posts() ) : $objectives->the_post(); ?>
-                    <div class="col-md-4 content-item mb-3">
-                        <div class="img-wrap">
-                            <?php the_post_thumbnail('full'); ?>
-<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img1.png"-->
-<!--                                 alt="">-->
+                        <div class="col-md-4 content-item mb-3">
+                            <div class="img-wrap">
+                                <?php the_post_thumbnail('full'); ?>
+                            </div>
+                            <p class="para">
+                                <?php echo get_the_content(); ?>
+                            </p>
                         </div>
-                        <p class="para">
-                            <?php echo get_the_content(); ?>
-<!--                            To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,-->
-<!--                            highlight the impact and achievements;-->
-                        </p>
-                    </div>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
 
-
-
-<!--                    <div class="col-md-4 content-item mb-3">-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img2.png"-->
-<!--                                 alt="">-->
-<!--                        </div>-->
-<!--                        <p class="para">-->
-<!--                            Provide opportunities for young people to contribute to the high level discussions about a-->
-<!--                            joint vision for European Union and Eastern Partnership cooperation, and to convey-->
-<!--                            recommendations to the Eastern Partnership Summit in 2020;-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-4 content-item mb-3">-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img3.png"-->
-<!--                                 alt="">-->
-<!--                        </div>-->
-<!--                        <p class="para">-->
-<!--                            Foster discussions and unity between delegates of European Union and Eastern Partnership-->
-<!--                            regions on the changing landscape of youth demands and youth policy;-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <div class="col content-item mb-3">-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img4.png"-->
-<!--                                 alt="">-->
-<!--                        </div>-->
-<!--                        <p class="para">-->
-<!--                            Encourage further cooperation, partnerships and good practice exchange among young people,-->
-<!--                            youth workers, organizations and institutions dealing with youth policy in European Union-->
-<!--                            and Eastern Partnership countries;-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <div class="col content-item mb-3">-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img5.png"-->
-<!--                                 alt="">-->
-<!--                        </div>-->
-<!--                        <p class="para">-->
-<!--                            Collect the opinions of young people on Critical thinking, media literacy and active-->
-<!--                            participation and inform the discussions of Eastern Partnership High level Summit in 2020.-->
-<!--                        </p>-->
-<!--                    </div>-->
                 </div>
             </div>
             <script type="text/javascript">
@@ -140,75 +92,6 @@
             </div>
         </div>
     </section>
-
-<!--    <section class="youth-forum">-->
-<!--    <div class="container forum-container">-->
-<!--        <div class="heading text-center">-->
-<!--            <h4 class="title-h4">The main objectives of the</h4>-->
-<!--            <h3 class="title-h3">4th Eastern Partnership <br>Youth Forum</h3>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="content">-->
-<!--            <div class="row content-row">-->
-<!--                <div class="col-md-4 content-item mb-3">-->
-<!--                    <div class="img-wrap">-->
-<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img1.png"-->
-<!--                             alt="">-->
-<!--                    </div>-->
-<!--                    <p class="para">-->
-<!--                        To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,-->
-<!--                        highlight the impact and achievements;-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <div class="col-md-4 content-item mb-3">-->
-<!--                    <div class="img-wrap">-->
-<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img2.png"-->
-<!--                             alt="">-->
-<!--                    </div>-->
-<!--                    <p class="para">-->
-<!--                        Provide opportunities for young people to contribute to the high level discussions about a-->
-<!--                        joint vision for European Union and Eastern Partnership cooperation, and to convey-->
-<!--                        recommendations to the Eastern Partnership Summit in 2020;-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <div class="col-md-4 content-item mb-3">-->
-<!--                    <div class="img-wrap">-->
-<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img3.png"-->
-<!--                             alt="">-->
-<!--                    </div>-->
-<!--                    <p class="para">-->
-<!--                        Foster discussions and unity between delegates of European Union and Eastern Partnership-->
-<!--                        regions on the changing landscape of youth demands and youth policy;-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <div class="col content-item align-self-centerx mb-3">-->
-<!--                    <div class="img-wrap">-->
-<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img4.png"-->
-<!--                             alt="">-->
-<!--                    </div>-->
-<!--                    <p class="para">-->
-<!--                        Encourage further cooperation, partnerships and good practice exchange among young people,-->
-<!--                        youth workers, organizations and institutions dealing with youth policy in European Union-->
-<!--                        and Eastern Partnership countries;-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <div class="col content-item align-self-centerx mb-3">-->
-<!--                    <div class="img-wrap">-->
-<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img5.png"-->
-<!--                             alt="">-->
-<!--                    </div>-->
-<!--                    <p class="para">-->
-<!--                        Collect the opinions of young people on Critical thinking, media literacy and active-->
-<!--                        participation and inform the discussions of Eastern Partnership High level Summit in 2020.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="end-forum">-->
-<!--            <div class="end-forum-bg"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
     <!--    Count section-->
     <section class="count-wrap">
