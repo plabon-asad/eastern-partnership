@@ -1,54 +1,63 @@
 <?php get_header(); ?>
 
 
-    <div class="query-post">
-        <?php
-        $args = array(
-                'post_type' => 'banner',
-                'posts_per_page' => 1,
-                'order' => 'ASC',
-        );
+<!--    <div class="query-post">-->
+<!--        --><?php
+//        $args = array(
+//                'post_type' => 'banner',
+//                'posts_per_page' => 1,
+//                'order' => 'ASC',
+//        );
+//
+//        $banner = new WP_Query($args) ?>
+<!--        <table class="table">-->
+<!--            <tbody>-->
+<!--            --><?php //while ( $banner->have_posts() ) : $banner->the_post(); ?>
+<!--                <tr>-->
+<!--                    <td>Name</td>-->
+<!--                    <td>Value</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Title</td>-->
+<!--                    <td>--><?php //the_title(); ?><!--</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Content</td>-->
+<!--                    <td>--><?php //echo get_the_content(); ?><!--</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Excerpt</td>-->
+<!--                    <td>--><?php //the_excerpt(); ?><!--</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Image</td>-->
+<!--                    <td>--><?php //the_post_thumbnail( 'full' ); ?><!--</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Custom field</td>-->
+<!--                    <td>--><?php //echo get_post_meta(10, 'custom_field_1', true); ?><!--</td>-->
+<!--                </tr>-->
+<!--            --><?php //endwhile; ?>
+<!--            </tbody>-->
+<!--        </table>-->
+<!--        --><?php //wp_reset_postdata(); ?>
+<!--    </div>-->
 
-        $banner = new WP_Query($args) ?>
-        <table class="table">
-            <tbody>
-            <?php while ( $banner->have_posts() ) : $banner->the_post(); ?>
-                <tr>
-                    <td>Name</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Title</td>
-                    <td><?php the_title(); ?></td>
-                </tr>
-                <tr>
-                    <td>Content</td>
-                    <td><?php echo get_the_content(); ?></td>
-                </tr>
-                <tr>
-                    <td>Excerpt</td>
-                    <td><?php the_excerpt(); ?></td>
-                </tr>
-                <tr>
-                    <td>Image</td>
-                    <td><?php the_post_thumbnail(); ?></td>
-                </tr>
-                <tr>
-                    <td>Custom field</td>
-                    <td><?php echo get_post_meta(10, 'custom_field_1', true); ?></td>
-                </tr>
-            <?php endwhile; ?>
-            </tbody>
-        </table>
-        <?php wp_reset_postdata(); ?>
-    </div>
 
+    <?php
+    $args = array(
+        'post_type' => 'banner',
+        'posts_per_page' => 1,
+        'order' => 'ASC',
+    );
 
+    $banner = new WP_Query($args) ?>
     <section class="top-banner">
+        <?php while ( $banner->have_posts() ) : $banner->the_post(); ?>
         <div class="container banner-container text-center">
             <div class="banner-content">
-                <h2>Eastern Partnership <br> Youth Forum</h2>
-                <p>We all will meet in Vilnius on 17-20 June 2019!</p>
+                <h2><?php echo get_the_content(); ?></h2>
+                <p><?php the_excerpt(); ?></p>
             </div>
 
             <div class="remaining-time">
@@ -56,19 +65,19 @@
                     <div class="title">Remaining time</div>
                     <ul class="common-ul">
                         <li>
-                            <time class="light-fontx">11</time>
+                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_days', true );?></time>
                             <div>Days</div>
                         </li>
                         <li>
-                            <time class="light-fontx">21</time>
+                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_hours', true );?></time>
                             <div>Hours</div>
                         </li>
                         <li>
-                            <time class="light-fontx">24</time>
+                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_minutes', true );?></time>
                             <div>Minutes</div>
                         </li>
                         <li>
-                            <time class="light-fontx">19</time>
+                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_seconds', true );?></time>
                             <div>Seconds</div>
                         </li>
                     </ul>
@@ -76,13 +85,51 @@
 
             </div>
 
-            <script>
-                $(function () {
-
-                })
-            </script>
         </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
     </section>
+
+
+<!--    <section class="top-banner">-->
+<!--    <div class="container banner-container text-center">-->
+<!--        <div class="banner-content">-->
+<!--            <h2>Eastern Partnership <br> Youth Forum</h2>-->
+<!--            <p>We all will meet in Vilnius on 17-20 June 2019!</p>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="remaining-time">-->
+<!--            <div class="time-content">-->
+<!--                <div class="title">Remaining time</div>-->
+<!--                <ul class="common-ul">-->
+<!--                    <li>-->
+<!--                        <time class="light-fontx">11</time>-->
+<!--                        <div>Days</div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <time class="light-fontx">21</time>-->
+<!--                        <div>Hours</div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <time class="light-fontx">24</time>-->
+<!--                        <div>Minutes</div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <time class="light-fontx">19</time>-->
+<!--                        <div>Seconds</div>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!---->
+<!--        <script>-->
+<!--            $(function () {-->
+<!---->
+<!--            })-->
+<!--        </script>-->
+<!--    </div>-->
+<!--</section>-->
 
     <div class="h-200"></div>
     <section class="youth-forum">
