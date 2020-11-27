@@ -1,49 +1,5 @@
 <?php get_header(); ?>
 
-
-<!--    <div class="query-post">-->
-<!--        --><?php
-//        $args = array(
-//                'post_type' => 'banner',
-//                'posts_per_page' => 1,
-//                'order' => 'ASC',
-//        );
-//
-//        $banner = new WP_Query($args) ?>
-<!--        <table class="table">-->
-<!--            <tbody>-->
-<!--            --><?php //while ( $banner->have_posts() ) : $banner->the_post(); ?>
-<!--                <tr>-->
-<!--                    <td>Name</td>-->
-<!--                    <td>Value</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Title</td>-->
-<!--                    <td>--><?php //the_title(); ?><!--</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Content</td>-->
-<!--                    <td>--><?php //echo get_the_content(); ?><!--</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Excerpt</td>-->
-<!--                    <td>--><?php //the_excerpt(); ?><!--</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Image</td>-->
-<!--                    <td>--><?php //the_post_thumbnail( 'full' ); ?><!--</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Custom field</td>-->
-<!--                    <td>--><?php //echo get_post_meta(10, 'custom_field_1', true); ?><!--</td>-->
-<!--                </tr>-->
-<!--            --><?php //endwhile; ?>
-<!--            </tbody>-->
-<!--        </table>-->
-<!--        --><?php //wp_reset_postdata(); ?>
-<!--    </div>-->
-
-
     <?php
     $args = array(
         'post_type' => 'banner',
@@ -90,48 +46,8 @@
         <?php wp_reset_postdata(); ?>
     </section>
 
-
-<!--    <section class="top-banner">-->
-<!--    <div class="container banner-container text-center">-->
-<!--        <div class="banner-content">-->
-<!--            <h2>Eastern Partnership <br> Youth Forum</h2>-->
-<!--            <p>We all will meet in Vilnius on 17-20 June 2019!</p>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="remaining-time">-->
-<!--            <div class="time-content">-->
-<!--                <div class="title">Remaining time</div>-->
-<!--                <ul class="common-ul">-->
-<!--                    <li>-->
-<!--                        <time class="light-fontx">11</time>-->
-<!--                        <div>Days</div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <time class="light-fontx">21</time>-->
-<!--                        <div>Hours</div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <time class="light-fontx">24</time>-->
-<!--                        <div>Minutes</div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <time class="light-fontx">19</time>-->
-<!--                        <div>Seconds</div>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
-<!---->
-<!--        <script>-->
-<!--            $(function () {-->
-<!---->
-<!--            })-->
-<!--        </script>-->
-<!--    </div>-->
-<!--</section>-->
-
     <div class="h-200"></div>
+
     <section class="youth-forum">
         <div class="container forum-container">
             <div class="heading text-center">
@@ -140,66 +56,159 @@
             </div>
 
             <div class="content">
-                <div class="row content-row">
+                <div id="objective_items" class="row content-row">
+                    <?php
+                    $obj_args = array(
+                        'post_type' => 'objective',
+                        'posts_per_page' => 5,
+                        'order' => 'ASC',
+                    );
+
+                    $objectives = new WP_Query($obj_args) ?>
+                    <?php while ( $objectives->have_posts() ) : $objectives->the_post(); ?>
                     <div class="col-md-4 content-item mb-3">
                         <div class="img-wrap">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img1.png"
-                                 alt="">
+                            <?php the_post_thumbnail('full'); ?>
+<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img1.png"-->
+<!--                                 alt="">-->
                         </div>
                         <p class="para">
-                            To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,
-                            highlight the impact and achievements;
+                            <?php echo get_the_content(); ?>
+<!--                            To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,-->
+<!--                            highlight the impact and achievements;-->
                         </p>
                     </div>
-                    <div class="col-md-4 content-item mb-3">
-                        <div class="img-wrap">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img2.png"
-                                 alt="">
-                        </div>
-                        <p class="para">
-                            Provide opportunities for young people to contribute to the high level discussions about a
-                            joint vision for European Union and Eastern Partnership cooperation, and to convey
-                            recommendations to the Eastern Partnership Summit in 2020;
-                        </p>
-                    </div>
-                    <div class="col-md-4 content-item mb-3">
-                        <div class="img-wrap">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img3.png"
-                                 alt="">
-                        </div>
-                        <p class="para">
-                            Foster discussions and unity between delegates of European Union and Eastern Partnership
-                            regions on the changing landscape of youth demands and youth policy;
-                        </p>
-                    </div>
-                    <div class="col content-item align-self-centerx mb-3">
-                        <div class="img-wrap">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img4.png"
-                                 alt="">
-                        </div>
-                        <p class="para">
-                            Encourage further cooperation, partnerships and good practice exchange among young people,
-                            youth workers, organizations and institutions dealing with youth policy in European Union
-                            and Eastern Partnership countries;
-                        </p>
-                    </div>
-                    <div class="col content-item align-self-centerx mb-3">
-                        <div class="img-wrap">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/youth-img5.png"
-                                 alt="">
-                        </div>
-                        <p class="para">
-                            Collect the opinions of young people on Critical thinking, media literacy and active
-                            participation and inform the discussions of Eastern Partnership High level Summit in 2020.
-                        </p>
-                    </div>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+
+
+
+<!--                    <div class="col-md-4 content-item mb-3">-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img2.png"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
+<!--                        <p class="para">-->
+<!--                            Provide opportunities for young people to contribute to the high level discussions about a-->
+<!--                            joint vision for European Union and Eastern Partnership cooperation, and to convey-->
+<!--                            recommendations to the Eastern Partnership Summit in 2020;-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4 content-item mb-3">-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img3.png"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
+<!--                        <p class="para">-->
+<!--                            Foster discussions and unity between delegates of European Union and Eastern Partnership-->
+<!--                            regions on the changing landscape of youth demands and youth policy;-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="col content-item mb-3">-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img4.png"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
+<!--                        <p class="para">-->
+<!--                            Encourage further cooperation, partnerships and good practice exchange among young people,-->
+<!--                            youth workers, organizations and institutions dealing with youth policy in European Union-->
+<!--                            and Eastern Partnership countries;-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="col content-item mb-3">-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img5.png"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
+<!--                        <p class="para">-->
+<!--                            Collect the opinions of young people on Critical thinking, media literacy and active-->
+<!--                            participation and inform the discussions of Eastern Partnership High level Summit in 2020.-->
+<!--                        </p>-->
+<!--                    </div>-->
                 </div>
             </div>
+            <script type="text/javascript">
+                $(function (){
+                    let fourthItem = $('#objective_items .content-item:nth-child(4)');
+                    let fifthItem = $('#objective_items .content-item:nth-child(5)');
+                    fourthItem.removeClass('col-md-4').addClass('col')
+                    fifthItem.removeClass('col-md-4').addClass('col')
+                })
+            </script>
             <div class="end-forum">
                 <div class="end-forum-bg"></div>
             </div>
         </div>
     </section>
+
+<!--    <section class="youth-forum">-->
+<!--    <div class="container forum-container">-->
+<!--        <div class="heading text-center">-->
+<!--            <h4 class="title-h4">The main objectives of the</h4>-->
+<!--            <h3 class="title-h3">4th Eastern Partnership <br>Youth Forum</h3>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="content">-->
+<!--            <div class="row content-row">-->
+<!--                <div class="col-md-4 content-item mb-3">-->
+<!--                    <div class="img-wrap">-->
+<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img1.png"-->
+<!--                             alt="">-->
+<!--                    </div>-->
+<!--                    <p class="para">-->
+<!--                        To celebrate the 10th anniversary of European Union and Eastern Partnership cooperation,-->
+<!--                        highlight the impact and achievements;-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col-md-4 content-item mb-3">-->
+<!--                    <div class="img-wrap">-->
+<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img2.png"-->
+<!--                             alt="">-->
+<!--                    </div>-->
+<!--                    <p class="para">-->
+<!--                        Provide opportunities for young people to contribute to the high level discussions about a-->
+<!--                        joint vision for European Union and Eastern Partnership cooperation, and to convey-->
+<!--                        recommendations to the Eastern Partnership Summit in 2020;-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col-md-4 content-item mb-3">-->
+<!--                    <div class="img-wrap">-->
+<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img3.png"-->
+<!--                             alt="">-->
+<!--                    </div>-->
+<!--                    <p class="para">-->
+<!--                        Foster discussions and unity between delegates of European Union and Eastern Partnership-->
+<!--                        regions on the changing landscape of youth demands and youth policy;-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col content-item align-self-centerx mb-3">-->
+<!--                    <div class="img-wrap">-->
+<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img4.png"-->
+<!--                             alt="">-->
+<!--                    </div>-->
+<!--                    <p class="para">-->
+<!--                        Encourage further cooperation, partnerships and good practice exchange among young people,-->
+<!--                        youth workers, organizations and institutions dealing with youth policy in European Union-->
+<!--                        and Eastern Partnership countries;-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col content-item align-self-centerx mb-3">-->
+<!--                    <div class="img-wrap">-->
+<!--                        <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/youth-img5.png"-->
+<!--                             alt="">-->
+<!--                    </div>-->
+<!--                    <p class="para">-->
+<!--                        Collect the opinions of young people on Critical thinking, media literacy and active-->
+<!--                        participation and inform the discussions of Eastern Partnership High level Summit in 2020.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="end-forum">-->
+<!--            <div class="end-forum-bg"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
     <!--    Count section-->
     <section class="count-wrap">

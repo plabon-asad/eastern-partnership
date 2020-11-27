@@ -78,6 +78,50 @@ function banner_post_type() {
     register_post_type('banner', $args);
 }
 
+/**
+ * Main objective post dynamic
+ */
+add_action('init', 'objective_post_type');
+function objective_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Objective', 'Main Objective type post', 'textdomain' ),
+        'singular_name'         => _x( 'Objective Item', 'Objective type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Objective', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Objective', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Objective', 'textdomain' ),
+        'new_item'              => __( 'New Objective', 'textdomain' ),
+        'edit_item'             => __( 'Edit Objective', 'textdomain' ),
+        'view_item'             => __( 'View Objective', 'textdomain' ),
+        'all_items'             => __( 'All Objective', 'textdomain' ),
+        'search_items'          => __( 'Search Objective', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Objective:', 'textdomain' ),
+        'not_found'             => __( 'No Objective found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Objective found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Objective Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Objective image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Objective image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Objective image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Objective archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'objective' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    );
+    register_post_type('objective', $args);
+}
+
 
 
 
