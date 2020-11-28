@@ -141,7 +141,6 @@
     <!---->
     <!--    </section>-->
 
-
     <?php
     $obj_args = array(
         'post_type' => 'forum',
@@ -228,29 +227,34 @@
     <!--    </script>-->
 
 
+    <?php
+    $obj_args = array(
+        'post_type' => 'about_lithuania',
+        'posts_per_page' => 1,
+        'order' => 'ASC',
+    );
+
+    $info = new WP_Query($obj_args) ?>
+    <?php while ( $info->have_posts() ) : $info->the_post(); ?>
     <!--    About Lithuania mobile view-->
     <section id="about-lithuania-mv" class="gray-bg">
         <div class="container text-center pb-5 mt-5">
-            <h4 class="title-h4 pt-5">About Lithuania</h4>
-            <h3 class="title-mid mb-5">Lithuania is a country in Northern Europe</h3>
+            <h4 class="title-h4 pt-5"><?php the_title(); ?></h4>
+            <h3 class="title-mid mb-5"><?php echo get_post_meta( 34, 'info_sub_title', true ); ?></h3>
 
             <div class="map-pattern-blue mb-4">
-                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/country-img.png"
-                     alt="">
+                <?php the_post_thumbnail('full'); ?>
                 <a class="play-btn" href="#"><i class="fa fa-play"></i></a>
             </div>
 
 
             <div class="content text-left">
                 <p>
-                    The official name of the country is the Republic of Lithuania. Lithuania
-                    is situated on the eastern shore of the Baltic Sea and borders Latvia on the north,
-                    Belarus on the east and south, and Poland and the Kaliningrad region of Russia on the
-                    southwest. The official language is Lithuania.
-                    Vilnius is the capital of Lithuania and its largest city. It is known for its baroque
-                    architecture, seen especially in its medieval old town.
+                    <?php echo get_the_content(); ?>
                 </p>
-                <a href="#">Find out more <i class="fa fa fa-long-arrow-right"></i></a>
+                <a href="<?php echo get_post_meta( 34, 'info_details_link_url', true )?>">
+                    <?php echo get_post_meta( 34, 'info_details_link_text', true )?>
+                </a>
             </div>
         </div>
     </section>
@@ -261,25 +265,21 @@
 
                 <div class="map-col col-lg-6">
                     <div class="content">
-                        <h4 class="title-h4">About Lithuania</h4>
-                        <h3 class="title-mid">Lithuania is a country in Northern Europe</h3>
+                        <h4 class="title-h4"><?php the_title(); ?></h4>
+                        <h3 class="title-mid"><?php echo get_post_meta( 34, 'info_sub_title', true ); ?></h3>
                         <p>
-                            The official name of the country is the Republic of Lithuania. Lithuania
-                            is situated on the eastern shore of the Baltic Sea and borders Latvia on the north,
-                            Belarus on the east and south, and Poland and the Kaliningrad region of Russia on the
-                            southwest. The official language is Lithuania.
-                            Vilnius is the capital of Lithuania and its largest city. It is known for its baroque
-                            architecture, seen especially in its medieval old town.
+                            <?php echo get_the_content(); ?>
                         </p>
-                        <a href="#">Find out more <i class="fa fa fa-long-arrow-right"></i></a>
+                        <a href="<?php echo get_post_meta( 34, 'info_details_link_url', true )?>">
+                            <?php echo get_post_meta( 34, 'info_details_link_text', true )?>
+                        </a>
                     </div>
 
                 </div>
                 <div class="content-col col-lg-6">
                     <div id="about-forum" class="forum-map">
                         <div class="pattern-blue">
-                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/country-img.png"
-                                 alt="">
+                            <?php the_post_thumbnail('full'); ?>
                         </div>
 
                     </div>
@@ -287,6 +287,11 @@
             </div>
         </div>
     </section>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+
+
+
 
     <!-- Moderator -->
     <section class="moderator" style="position:relative;">

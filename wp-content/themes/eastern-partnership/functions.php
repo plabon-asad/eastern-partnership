@@ -166,6 +166,50 @@ function forum_post_type() {
     register_post_type('forum', $args);
 }
 
+/**
+ * About Lithuania post dynamic
+ */
+add_action('init', 'about_lithuania_post_type');
+function about_lithuania_post_type() {
+    $labels = array(
+        'name'                  => _x( 'About Lithuania', 'Main Lithuania type post', 'textdomain' ),
+        'singular_name'         => _x( 'Lithuania Item', 'Lithuania type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Lithuania', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Lithuania', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New Info', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Info', 'textdomain' ),
+        'new_item'              => __( 'New Lithuania', 'textdomain' ),
+        'edit_item'             => __( 'Edit Lithuania', 'textdomain' ),
+        'view_item'             => __( 'View Lithuania', 'textdomain' ),
+        'all_items'             => __( 'All Info', 'textdomain' ),
+        'search_items'          => __( 'Search Lithuania', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Lithuania:', 'textdomain' ),
+        'not_found'             => __( 'No Lithuania found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Lithuania found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Lithuania Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Lithuania image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Lithuania image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Lithuania image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Lithuania archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'about_lithuania' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
+    );
+    register_post_type('about_lithuania', $args);
+}
+
 
 
 
