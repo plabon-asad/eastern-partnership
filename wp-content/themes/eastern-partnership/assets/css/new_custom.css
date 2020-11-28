@@ -690,15 +690,21 @@ ul.f-social li a {
 }
 
 /* Breakpoints */
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /*.title-mid {*/
-    /*    color: red*/
+    /*.title-mid {color: red}*/
+
+    /*.m-col .card-item .img-wrap img.flag {*/
+    /*    bottom: 25px;*/
+    /*    right: 135px;*/
     /*}*/
 
     .m-col .card-item .img-wrap img.flag {
+        right: 25%;
         bottom: 25px;
-        right: 135px;
     }
 
     #about-forum-mv, #about-lithuania-mv {
@@ -713,9 +719,7 @@ ul.f-social li a {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    /*.title-mid {*/
-    /*    color: greenyellow*/
-    /*}*/
+    /*.title-mid {color: greenyellow}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -738,9 +742,7 @@ ul.f-social li a {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    /*.title-mid {*/
-    /*    color: tomato*/
-    /*}*/
+    /*.title-mid {color: tomato}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -763,9 +765,7 @@ ul.f-social li a {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    /*.title-mid {*/
-    /*    color: gray*/
-    /*}*/
+    /*.title-mid {color: gray}*/
 
     .left-triangle, .right-triangle {
         visibility: hidden;
@@ -791,9 +791,7 @@ ul.f-social li a {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    /*.title-mid {*/
-    /*    color: black*/
-    /*}*/
+    /*.title-mid {color: black}*/
 
     .left-triangle, .right-triangle {
         visibility: visible;

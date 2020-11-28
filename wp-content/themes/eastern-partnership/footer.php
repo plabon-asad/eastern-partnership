@@ -1,5 +1,5 @@
 
-<!-- Partners -->
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-container container">
         <?php
@@ -31,7 +31,6 @@
             </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
-
 
     </div>
 </footer>

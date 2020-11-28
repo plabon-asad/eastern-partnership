@@ -215,8 +215,6 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
-
-
     <?php
     $obj_args = array(
         'post_type' => 'about_lithuania',
@@ -279,9 +277,6 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
-
-
-    <!-- Todo dynamic korte hobe -->
     <!-- Moderator -->
     <section class="moderator" style="position:relative;">
         <div class="left-triangle"></div>
