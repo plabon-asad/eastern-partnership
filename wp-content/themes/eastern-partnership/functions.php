@@ -253,6 +253,49 @@ function organiser_post_type() {
     );
     register_post_type('organiser', $args);
 }
+/**
+ * Organiser post dynamic
+ */
+add_action('init', 'partners_post_type');
+function partners_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Partners', 'Main Organiser type post', 'textdomain' ),
+        'singular_name'         => _x( 'Partners Item', 'Lithuania type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Partners', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Partners', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New ', 'textdomain' ),
+        'add_new_item'          => __( 'Add New ', 'textdomain' ),
+        'new_item'              => __( 'New Partners', 'textdomain' ),
+        'edit_item'             => __( 'Edit Partners', 'textdomain' ),
+        'view_item'             => __( 'View Partners', 'textdomain' ),
+        'all_items'             => __( 'All Partners', 'textdomain' ),
+        'search_items'          => __( 'Search Partners', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Partners:', 'textdomain' ),
+        'not_found'             => __( 'No Partners found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Partners found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Partners Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Partners image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Partners image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Partners image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Partners archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'partners' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'thumbnail' ),
+    );
+    register_post_type('partners', $args);
+}
 
 
 

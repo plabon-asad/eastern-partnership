@@ -376,60 +376,24 @@
         <div class="partners-container container text-center">
             <h3 class="title-black">Partners</h3>
             <div class="custom-row">
+
+                <?php
+                $obj_args = array(
+                    'post_type' => 'partners',
+                    'posts_per_page' => -1,
+                    'order' => 'ASC',
+                );
+
+                $partners = new WP_Query($obj_args) ?>
+                <?php while ( $partners->have_posts() ) : $partners->the_post(); ?>
                 <div class="item">
                     <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-1.png"
-                             alt="">
+                        <?php the_post_thumbnail('full'); ?>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-2.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-3.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-4.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-5.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-6.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-7.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-8.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/partner-9.png"
-                             alt="">
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
         </div>
     </section>
