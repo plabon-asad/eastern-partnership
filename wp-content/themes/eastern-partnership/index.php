@@ -103,38 +103,40 @@
         </div>
     </section>
 
-    <!--    Count section-->
+    <!--  Count section-->
     <section class="count-wrap">
         <div class="count-container container">
             <div class="row count-row">
-                <div class="col-md-4 count-col text-center">
+                <?php
+                $obj_args = array(
+                    'post_type' => 'count',
+                    'posts_per_page' => 3,
+                    'order' => 'ASC',
+                );
+
+                $counts = new WP_Query($obj_args) ?>
+                <?php while ( $counts->have_posts() ) : $counts->the_post(); ?>
+
+                    <div class="col-md-4 count-col text-center">
                     <div class="count-item">
-                        <h2 class="light-font">250</h2>
-                        <b>participants</b>
-                        <p>
-                            including active young people, youth workers and youth policy makers from both Eastern
-                            Partnership
-                        </p>
+                        <h2 class="light-font"><?php echo get_post_meta( get_the_ID(), 'count_number', true )?></h2>
+                        <b><?php echo get_post_meta( get_the_ID(), 'count_type', true )?></b>
+                        <?php the_content(); ?>
                     </div>
                 </div>
-                <div class="col-md-4 count-col text-center">
-                    <div class="count-item">
-                        <h2 class="light-font">34</h2>
-                        <b>countries</b>
-                        <p>European countries involved in the EU Erasmus+</p>
-                    </div>
-                </div>
-                <div class="col-md-4 count-col text-center">
-                    <div class="count-item">
-                        <h2 class="light-font">3</h2>
-                        <b>days</b>
-                        <p>Programme — will meet and discuss in a two-day event in Vilnius, on 17-20 June 2018.</p>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
         </div>
     </section>
 
+
+
+
+
+
+    <!-- Todo:   Dynamic korte hobe -->
     <!--    Big map-->
     <section class="big-map">
         <div class="bm-container">
@@ -164,7 +166,7 @@
     <section id="about-forum-mv">
         <div class="container text-center mb-5 mt-5">
             <h4 class="title-h4"><?php the_title(); ?></h4>
-            <h3 class="title-mid mb-5"><?php echo get_post_meta( 30, 'forum_sub_title', true ); ?></h3>
+            <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
             <div class="map-pattern-green mb-4" style="position: relative">
                 <?php the_post_thumbnail('full'); ?>
 <!--                <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/forum-map.png"-->
@@ -174,8 +176,8 @@
                 <p>
                     <?php echo get_the_content(); ?>
                 </p>
-                <a href="<?php echo get_post_meta( 30, 'forum_details_link_url', true )?>">
-                    <?php echo get_post_meta( 30, 'forum_details_link_text', true )?>
+                <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
+                    <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
                 </a>
             </div>
         </div>
@@ -192,12 +194,12 @@
                 <div class="content-col col-lg-6 mb-3">
                     <div class="content">
                         <h4 class="title-h4"><?php the_title(); ?></h4>
-                        <h3 class="title-mid"><?php echo get_post_meta( 30, 'forum_sub_title', true ); ?></h3>
+                        <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
                         <p>
                             <?php echo get_the_content(); ?>
                         </p>
-                        <a href="<?php echo get_post_meta( 30, 'forum_details_link_url', true )?>">
-                            <?php echo get_post_meta( 30, 'forum_details_link_text', true )?>
+                        <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
+                            <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
                         </a>
                     </div>
 
@@ -250,7 +252,7 @@
     <section id="about-lithuania-mv" class="gray-bg">
         <div class="container text-center pb-5 mt-5">
             <h4 class="title-h4 pt-5"><?php the_title(); ?></h4>
-            <h3 class="title-mid mb-5"><?php echo get_post_meta( 34, 'info_sub_title', true ); ?></h3>
+            <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
 
             <div class="map-pattern-blue mb-4">
                 <?php the_post_thumbnail('full'); ?>
@@ -262,8 +264,8 @@
                 <p>
                     <?php echo get_the_content(); ?>
                 </p>
-                <a href="<?php echo get_post_meta( 34, 'info_details_link_url', true )?>">
-                    <?php echo get_post_meta( 34, 'info_details_link_text', true )?>
+                <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
+                    <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
                 </a>
             </div>
         </div>
@@ -276,12 +278,12 @@
                 <div class="map-col col-lg-6">
                     <div class="content">
                         <h4 class="title-h4"><?php the_title(); ?></h4>
-                        <h3 class="title-mid"><?php echo get_post_meta( 34, 'info_sub_title', true ); ?></h3>
+                        <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
                         <p>
                             <?php echo get_the_content(); ?>
                         </p>
-                        <a href="<?php echo get_post_meta( 34, 'info_details_link_url', true )?>">
-                            <?php echo get_post_meta( 34, 'info_details_link_text', true )?>
+                        <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
+                            <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
                         </a>
                     </div>
 

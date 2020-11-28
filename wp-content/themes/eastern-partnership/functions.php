@@ -123,6 +123,50 @@ function objective_post_type() {
 }
 
 /**
+ * Count post dynamic
+ */
+add_action('init', 'count_post_type');
+function count_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Count', 'Main Count type post', 'textdomain' ),
+        'singular_name'         => _x( 'Count Item', 'Count type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Count', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Count', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Count', 'textdomain' ),
+        'new_item'              => __( 'New Count', 'textdomain' ),
+        'edit_item'             => __( 'Edit Count', 'textdomain' ),
+        'view_item'             => __( 'View Count', 'textdomain' ),
+        'all_items'             => __( 'All Count', 'textdomain' ),
+        'search_items'          => __( 'Search Count', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Count:', 'textdomain' ),
+        'not_found'             => __( 'No Count found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Count found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Count Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Count image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Count image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Count image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Count archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'count' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'custom-fields' ),
+    );
+    register_post_type('count', $args);
+}
+
+/**
  * About forum post dynamic
  */
 add_action('init', 'forum_post_type');
