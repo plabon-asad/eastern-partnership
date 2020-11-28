@@ -290,9 +290,6 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
-
-
-
     <!-- Moderator -->
     <section class="moderator" style="position:relative;">
         <div class="left-triangle"></div>
@@ -352,27 +349,27 @@
         <div class="organiser-container container text-center">
             <h3 class="title-black">Organisers</h3>
             <div class="row m-row organiser-row align-items-center">
+                <?php
+                $obj_args = array(
+                    'post_type' => 'organiser',
+                    'posts_per_page' => 3,
+                    'order' => 'ASC',
+                );
+
+                $organiser = new WP_Query($obj_args) ?>
+                <?php while ( $organiser->have_posts() ) : $organiser->the_post(); ?>
                 <div class="col-md-4 organiser-col mb-4">
                     <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-1.png"
-                             alt="">
+                        <?php the_post_thumbnail('full'); ?>
                     </div>
                 </div>
-                <div class="col-md-4 organiser-col mb-4">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-2.png"
-                             alt="">
-                    </div>
-                </div>
-                <div class="col-md-4 organiser-col mb-4">
-                    <div class="img-wrap">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/organizer-3.png"
-                             alt="">
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
         </div>
     </section>
+
 
     <!-- Partners -->
     <section class="partners">

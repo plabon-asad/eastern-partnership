@@ -210,6 +210,50 @@ function about_lithuania_post_type() {
     register_post_type('about_lithuania', $args);
 }
 
+/**
+ * Organiser post dynamic
+ */
+add_action('init', 'organiser_post_type');
+function organiser_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Organiser', 'Main Organiser type post', 'textdomain' ),
+        'singular_name'         => _x( 'Organiser Item', 'Lithuania type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Organiser', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Organiser', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New ', 'textdomain' ),
+        'add_new_item'          => __( 'Add New ', 'textdomain' ),
+        'new_item'              => __( 'New Organiser', 'textdomain' ),
+        'edit_item'             => __( 'Edit Organiser', 'textdomain' ),
+        'view_item'             => __( 'View Organiser', 'textdomain' ),
+        'all_items'             => __( 'All Organiser', 'textdomain' ),
+        'search_items'          => __( 'Search Organiser', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Organiser:', 'textdomain' ),
+        'not_found'             => __( 'No Organiser found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Organiser found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Organiser Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Organiser image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Organiser image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Organiser image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Organiser archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'organiser' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'thumbnail' ),
+    );
+    register_post_type('organiser', $args);
+}
+
 
 
 
