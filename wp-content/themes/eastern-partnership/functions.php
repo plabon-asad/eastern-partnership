@@ -122,6 +122,50 @@ function objective_post_type() {
     register_post_type('objective', $args);
 }
 
+/**
+ * About forum post dynamic
+ */
+add_action('init', 'forum_post_type');
+function forum_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Forum', 'Main Forum type post', 'textdomain' ),
+        'singular_name'         => _x( 'Forum Item', 'Forum type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Forum', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Forum', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Forum', 'textdomain' ),
+        'new_item'              => __( 'New Forum', 'textdomain' ),
+        'edit_item'             => __( 'Edit Forum', 'textdomain' ),
+        'view_item'             => __( 'View Forum', 'textdomain' ),
+        'all_items'             => __( 'All Forum', 'textdomain' ),
+        'search_items'          => __( 'Search Forum', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Forum:', 'textdomain' ),
+        'not_found'             => __( 'No Forum found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Forum found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Forum Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Forum image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Forum image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Forum image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Forum archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'forum' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
+    );
+    register_post_type('forum', $args);
+}
+
 
 
 

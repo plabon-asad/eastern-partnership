@@ -141,24 +141,33 @@
     <!---->
     <!--    </section>-->
 
+
+    <?php
+    $obj_args = array(
+        'post_type' => 'forum',
+        'posts_per_page' => 1,
+        'order' => 'ASC',
+    );
+
+    $forum = new WP_Query($obj_args) ?>
+    <?php while ( $forum->have_posts() ) : $forum->the_post(); ?>
     <!--    About forum mobile view-->
     <section id="about-forum-mv">
         <div class="container text-center mb-5 mt-5">
-            <h4 class="title-h4">About Forum</h4>
-            <h3 class="title-mid mb-5">We all will meet in Vilnius on 17-20 June 2019!</h3>
+            <h4 class="title-h4"><?php the_title(); ?></h4>
+            <h3 class="title-mid mb-5"><?php echo get_post_meta( 30, 'forum_sub_title', true ); ?></h3>
             <div class="map-pattern-green mb-4" style="position: relative">
-                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
-                     alt="">
+                <?php the_post_thumbnail('full'); ?>
+<!--                <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/forum-map.png"-->
+<!--                     alt="">-->
             </div>
             <div class="content text-left">
                 <p>
-                    The event will gather youth and youth work representatives, around 250 participants: each
-                    EaP country with 10 delegates from youth, organizations and institutions working with youth,
-                    EaP Youth ambassadors network representatives, 34 “Erasmus+” programme countries with 2
-                    delegates per country, team of facilitators and experts, other European Union, Council of
-                    Europe, national agency and international youth organizations representatives.
+                    <?php echo get_the_content(); ?>
                 </p>
-                <a href="#">Ežeraičių km., Ežeraičių g. 2, Vilnius, Lietuva LT-14200</a>
+                <a href="<?php echo get_post_meta( 30, 'forum_details_link_url', true )?>">
+                    <?php echo get_post_meta( 30, 'forum_details_link_text', true )?>
+                </a>
             </div>
         </div>
     </section>
@@ -168,28 +177,27 @@
             <div id="about-forum-row" class="af-row row">
                 <div class="map-col col-lg-6 mb-3">
                     <div id="about-forum" class="forum-map diamond-bg pattern-green">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/forum-map.png"
-                             alt="">
+                        <?php the_post_thumbnail('full'); ?>
                     </div>
                 </div>
                 <div class="content-col col-lg-6 mb-3">
                     <div class="content">
-                        <h4 class="title-h4">About Forum</h4>
-                        <h3 class="title-mid">We all will meet in Vilnius on 17-20 June 2019!</h3>
+                        <h4 class="title-h4"><?php the_title(); ?></h4>
+                        <h3 class="title-mid"><?php echo get_post_meta( 30, 'forum_sub_title', true ); ?></h3>
                         <p>
-                            The event will gather youth and youth work representatives, around 250 participants: each
-                            EaP country with 10 delegates from youth, organizations and institutions working with youth,
-                            EaP Youth ambassadors network representatives, 34 “Erasmus+” programme countries with 2
-                            delegates per country, team of facilitators and experts, other European Union, Council of
-                            Europe, national agency and international youth organizations representatives.
+                            <?php echo get_the_content(); ?>
                         </p>
-                        <a href="#">Ežeraičių km., Ežeraičių g. 2, Vilnius, Lietuva LT-14200</a>
+                        <a href="<?php echo get_post_meta( 30, 'forum_details_link_url', true )?>">
+                            <?php echo get_post_meta( 30, 'forum_details_link_text', true )?>
+                        </a>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
 
     <!--    <script type="text/javascript">-->
     <!--        $(function () {-->
