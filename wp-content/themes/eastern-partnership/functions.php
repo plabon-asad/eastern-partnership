@@ -385,6 +385,7 @@ function organiser_post_type() {
     );
     register_post_type('organiser', $args);
 }
+
 /**
  * Organiser post dynamic
  */
@@ -427,6 +428,50 @@ function partners_post_type() {
         'supports'           => array( 'title', 'thumbnail' ),
     );
     register_post_type('partners', $args);
+}
+
+/**
+ * Footer post dynamic
+ */
+add_action('init', 'footer_post_type');
+function footer_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Footer', 'Main Footer type post', 'textdomain' ),
+        'singular_name'         => _x( 'Footer Item', 'Footer type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Footer', 'Footer Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Footer', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New ', 'textdomain' ),
+        'add_new_item'          => __( 'Add New ', 'textdomain' ),
+        'new_item'              => __( 'New Footer', 'textdomain' ),
+        'edit_item'             => __( 'Edit Footer', 'textdomain' ),
+        'view_item'             => __( 'View Footer', 'textdomain' ),
+        'all_items'             => __( 'All Footer', 'textdomain' ),
+        'search_items'          => __( 'Search Footer', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Footer:', 'textdomain' ),
+        'not_found'             => __( 'No Footer found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Footer found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Footer Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Footer image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Footer image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Footer image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Footer archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'footer' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'custom-fields' ),
+    );
+    register_post_type('footer', $args);
 }
 
 
