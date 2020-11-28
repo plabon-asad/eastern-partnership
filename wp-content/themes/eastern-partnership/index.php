@@ -279,6 +279,9 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
+
+
+    <!-- Todo dynamic korte hobe -->
     <!-- Moderator -->
     <section class="moderator" style="position:relative;">
         <div class="left-triangle"></div>
@@ -287,44 +290,37 @@
             <div class="moderator-bg"></div>
             <h3 class="title-mid">Moderators and Facilitators</h3>
             <div class="row m-row">
-                <div class="col-md-6 m-col mb-4">
-                    <div class="card-item">
-                        <div class="img-wrap">
-                            <div class="mask">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male.png"
+                <?php
+                $obj_args = array(
+                    'post_type' => 'moderator',
+                    'posts_per_page' => 2,
+                    'order' => 'ASC',
+                );
+                $moderators = new WP_Query($obj_args) ?>
+                <?php while ( $moderators->have_posts() ) : $moderators->the_post(); ?>
+                    <div class="col-md-6 m-col mb-4">
+                        <div class="card-item">
+                            <div class="img-wrap">
+                                <div class="mask">
+                                    <?php the_post_thumbnail('full'); ?>
+<!--                                    <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/male.png"-->
+<!--                                         alt="">-->
+                                </div>
+
+                                <img class="flag"
+                                     src="<?php echo get_post_meta( get_the_ID(), 'mod_flag', true ) ?>"
                                      alt="">
                             </div>
-
-                            <img class="flag"
-                                 src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/male-flag.png"
-                                 alt="">
-                        </div>
-                        <div class="content">
-                            <h3>Marcus Vrecer</h3>
-                            <span>Main moderator, Austria</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 m-col mb-4">
-                    <div class="card-item">
-                        <div class="img-wrap">
-                            <div class="mask">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female.png"
-                                     alt="">
+                            <div class="content">
+                                <h3><?php echo get_post_meta( get_the_ID(), 'mod_name', true )?></h3>
+                                <span><?php echo get_post_meta( get_the_ID(), 'mod_type', true )?></span>
                             </div>
-                            <img class="flag"
-                                 src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/female-flag.png"
-                                 alt="">
-                        </div>
-                        <div class="content">
-                            <h3>Marcus Vrecer</h3>
-                            <span>Main moderator, Austria</span>
-                        </div>
 
+                        </div>
                     </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
 
             <a href="#">Check all facilitators <i class="fa fa fa-long-arrow-right"></i></a>
@@ -347,11 +343,11 @@
 
                 $organiser = new WP_Query($obj_args) ?>
                 <?php while ( $organiser->have_posts() ) : $organiser->the_post(); ?>
-                <div class="col-md-4 organiser-col mb-4">
-                    <div class="img-wrap">
-                        <?php the_post_thumbnail('full'); ?>
+                    <div class="col-md-4 organiser-col mb-4">
+                        <div class="img-wrap">
+                            <?php the_post_thumbnail('full'); ?>
+                        </div>
                     </div>
-                </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
 
@@ -375,11 +371,11 @@
 
                 $partners = new WP_Query($obj_args) ?>
                 <?php while ( $partners->have_posts() ) : $partners->the_post(); ?>
-                <div class="item">
-                    <div class="img-wrap">
-                        <?php the_post_thumbnail('full'); ?>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <?php the_post_thumbnail('full'); ?>
+                        </div>
                     </div>
-                </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
 
