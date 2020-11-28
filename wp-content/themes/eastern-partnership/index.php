@@ -1,49 +1,59 @@
 <?php get_header(); ?>
 
-    <?php
-    $args = array(
-        'post_type' => 'banner',
-        'posts_per_page' => 1,
-        'order' => 'ASC',
-    );
-
-    $banner = new WP_Query($args) ?>
     <section class="top-banner">
-        <?php while ( $banner->have_posts() ) : $banner->the_post(); ?>
-        <div class="container banner-container text-center">
-            <div class="banner-content">
-                <h2><?php echo get_the_content(); ?></h2>
-                <p><?php the_excerpt(); ?></p>
-            </div>
 
-            <div class="remaining-time">
-                <div class="time-content">
-                    <div class="title">Remaining time</div>
-                    <ul class="common-ul">
-                        <li>
-                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_days', true );?></time>
-                            <div>Days</div>
-                        </li>
-                        <li>
-                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_hours', true );?></time>
-                            <div>Hours</div>
-                        </li>
-                        <li>
-                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_minutes', true );?></time>
-                            <div>Minutes</div>
-                        </li>
-                        <li>
-                            <time class="light-fontx"><?php echo get_post_meta( 10, 'remaining_time_seconds', true );?></time>
-                            <div>Seconds</div>
-                        </li>
-                    </ul>
+        <div class="container banner-container text-center">
+            <?php
+            $args = array(
+                'post_type' => 'banner',
+                'posts_per_page' => 1,
+                'order' => 'ASC',
+            );
+
+            $banner = new WP_Query($args) ?>
+            <?php while ( $banner->have_posts() ) : $banner->the_post(); ?>
+                <div class="banner-content">
+                    <h2><?php echo get_post_meta( get_the_ID(), 'banner_h2', true )?></h2>
+                    <p><?php echo get_post_meta( get_the_ID(), 'banner_p', true )?></p>
                 </div>
 
-            </div>
+                <div class="remaining-time">
+                    <div class="time-content">
+                        <div class="title">Remaining time</div>
+                        <ul class="common-ul">
+                            <li>
+                                <time class="light-fontx">
+                                    <?php echo get_post_meta( get_the_ID(), 'banner_time_day', true )?>
+                                </time>
+                                <div>Days</div>
+                            </li>
+                            <li>
+                                <time class="light-fontx">
+                                    <?php echo get_post_meta( get_the_ID(), 'banner_time_hour', true )?>
+                                </time>
+                                <div>Hours</div>
+                            </li>
+                            <li>
+                                <time class="light-fontx">
+                                    <?php echo get_post_meta( get_the_ID(), 'banner_time_min', true )?>
+                                </time>
+                                <div>Minutes</div>
+                            </li>
+                            <li>
+                                <time class="light-fontx">
+                                    <?php echo get_post_meta( get_the_ID(), 'banner_time_second', true )?>
+                                </time>
+                                <div>Seconds</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
 
         </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+
     </section>
 
     <div class="h-200"></div>

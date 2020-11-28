@@ -73,7 +73,7 @@ function banner_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
+        'supports'           => array( 'title', 'thumbnail', 'custom-fields' ),
     );
     register_post_type('banner', $args);
 }
