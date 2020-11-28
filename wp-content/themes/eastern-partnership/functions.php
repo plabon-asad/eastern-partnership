@@ -167,6 +167,50 @@ function count_post_type() {
 }
 
 /**
+ * Map Image post dynamic
+ */
+add_action('init', 'map_post_type');
+function map_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Map', 'Main Map type post', 'textdomain' ),
+        'singular_name'         => _x( 'Map Item', 'Map type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Map', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Map', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Add New', 'textdomain' ),
+        'add_new_item'          => __( 'Add New Map', 'textdomain' ),
+        'new_item'              => __( 'New Map', 'textdomain' ),
+        'edit_item'             => __( 'Edit Map', 'textdomain' ),
+        'view_item'             => __( 'View Map', 'textdomain' ),
+        'all_items'             => __( 'All Map', 'textdomain' ),
+        'search_items'          => __( 'Search Map', 'textdomain' ),
+        'parent_item_colon'     => __( 'Parent Map:', 'textdomain' ),
+        'not_found'             => __( 'No Map found.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'No Map found in Trash.', 'textdomain' ),
+        'featured_image'        => _x( 'Map Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Set Map image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Remove Map image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'use_featured_image'    => _x( 'Use as Map image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'archives'              => _x( 'Map archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'map' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'thumbnail' ),
+    );
+    register_post_type('map', $args);
+}
+
+/**
  * About forum post dynamic
  */
 add_action('init', 'forum_post_type');

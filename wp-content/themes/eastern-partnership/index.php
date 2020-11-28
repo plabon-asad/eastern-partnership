@@ -131,17 +131,22 @@
         </div>
     </section>
 
-
-
-
-
-
-    <!-- Todo:   Dynamic korte hobe -->
     <!--    Big map-->
     <section class="big-map">
-        <div class="bm-container">
-            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/big-map.jpg" alt="">
-        </div>
+        <?php
+        $obj_args = array(
+            'post_type' => 'map',
+            'posts_per_page' => 1,
+            'order' => 'ASC',
+        );
+
+        $custom_map = new WP_Query($obj_args) ?>
+        <?php while ( $custom_map->have_posts() ) : $custom_map->the_post(); ?>
+            <div class="bm-container">
+                <?php the_post_thumbnail('full'); ?>
+            </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
     </section>
 
     <!--    Google map-->
@@ -162,81 +167,54 @@
 
     $forum = new WP_Query($obj_args) ?>
     <?php while ( $forum->have_posts() ) : $forum->the_post(); ?>
-    <!--    About forum mobile view-->
-    <section id="about-forum-mv">
-        <div class="container text-center mb-5 mt-5">
-            <h4 class="title-h4"><?php the_title(); ?></h4>
-            <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
-            <div class="map-pattern-green mb-4" style="position: relative">
-                <?php the_post_thumbnail('full'); ?>
-<!--                <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/forum-map.png"-->
-<!--                     alt="">-->
-            </div>
-            <div class="content text-left">
-                <p>
-                    <?php echo get_the_content(); ?>
-                </p>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
-                    <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!--    About forum desktop view-->
-    <section id="about-forum-lg" class="about-forum">
-        <div class="container af-container">
-            <div id="about-forum-row" class="af-row row">
-                <div class="map-col col-lg-6 mb-3">
-                    <div id="about-forum" class="forum-map diamond-bg pattern-green">
-                        <?php the_post_thumbnail('full'); ?>
-                    </div>
+        <!--    About forum mobile view-->
+        <section id="about-forum-mv">
+            <div class="container text-center mb-5 mt-5">
+                <h4 class="title-h4"><?php the_title(); ?></h4>
+                <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
+                <div class="map-pattern-green mb-4" style="position: relative">
+                    <?php the_post_thumbnail('full'); ?>
+    <!--                <img src="--><?php //echo esc_url(get_template_directory_uri()) ?><!--/assets/images/forum-map.png"-->
+    <!--                     alt="">-->
                 </div>
-                <div class="content-col col-lg-6 mb-3">
-                    <div class="content">
-                        <h4 class="title-h4"><?php the_title(); ?></h4>
-                        <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
-                        <p>
-                            <?php echo get_the_content(); ?>
-                        </p>
-                        <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
-                            <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
-                        </a>
+                <div class="content text-left">
+                    <p>
+                        <?php echo get_the_content(); ?>
+                    </p>
+                    <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
+                        <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--    About forum desktop view-->
+        <section id="about-forum-lg" class="about-forum">
+            <div class="container af-container">
+                <div id="about-forum-row" class="af-row row">
+                    <div class="map-col col-lg-6 mb-3">
+                        <div id="about-forum" class="forum-map diamond-bg pattern-green">
+                            <?php the_post_thumbnail('full'); ?>
+                        </div>
                     </div>
+                    <div class="content-col col-lg-6 mb-3">
+                        <div class="content">
+                            <h4 class="title-h4"><?php the_title(); ?></h4>
+                            <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'forum_sub_title', true ); ?></h3>
+                            <p>
+                                <?php echo get_the_content(); ?>
+                            </p>
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'forum_details_link_url', true )?>">
+                                <?php echo get_post_meta( get_the_ID(), 'forum_details_link_text', true )?>
+                            </a>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
-    <!--    <script type="text/javascript">-->
-    <!--        $(function () {-->
-    <!--            /* JavaScript Media Queries */-->
-    <!--            if (matchMedia) {-->
-    <!--                const mq = window.matchMedia("(max-width: 990px)");-->
-    <!--                mq.addListener(WidthChange);-->
-    <!--                WidthChange(mq);-->
-    <!--            }-->
-    <!---->
-    <!--            // media query change-->
-    <!--            function WidthChange(mq) {-->
-    <!--                if (mq.matches) {-->
-    <!--                    // window width is at least 500px-->
-    <!--                    alert(mq.media)-->
-    <!---->
-    <!--                    let box = $('#about-forum-row')-->
-    <!--                    console.log(box)-->
-    <!---->
-    <!--                } else {-->
-    <!--                    alert('No match');-->
-    <!--                    // window width is less than 500px-->
-    <!--                }-->
-    <!---->
-    <!--            }-->
-    <!--            -->
-    <!--        })-->
-    <!--    </script>-->
 
 
     <?php
@@ -245,60 +223,59 @@
         'posts_per_page' => 1,
         'order' => 'ASC',
     );
-
     $info = new WP_Query($obj_args) ?>
     <?php while ( $info->have_posts() ) : $info->the_post(); ?>
-    <!--    About Lithuania mobile view-->
-    <section id="about-lithuania-mv" class="gray-bg">
-        <div class="container text-center pb-5 mt-5">
-            <h4 class="title-h4 pt-5"><?php the_title(); ?></h4>
-            <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
+        <!--    About Lithuania mobile view-->
+        <section id="about-lithuania-mv" class="gray-bg">
+            <div class="container text-center pb-5 mt-5">
+                <h4 class="title-h4 pt-5"><?php the_title(); ?></h4>
+                <h3 class="title-mid mb-5"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
 
-            <div class="map-pattern-blue mb-4">
-                <?php the_post_thumbnail('full'); ?>
-                <a class="play-btn" href="#"><i class="fa fa-play"></i></a>
-            </div>
-
-
-            <div class="content text-left">
-                <p>
-                    <?php echo get_the_content(); ?>
-                </p>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
-                    <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!--    About Lithuania-->
-    <section id="about-lithuania-lg" class="about-lithuania gray-bg">
-        <div class="container af-container">
-            <div id="about-lithuania-row" class="af-row row">
-
-                <div class="map-col col-lg-6">
-                    <div class="content">
-                        <h4 class="title-h4"><?php the_title(); ?></h4>
-                        <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
-                        <p>
-                            <?php echo get_the_content(); ?>
-                        </p>
-                        <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
-                            <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
-                        </a>
-                    </div>
-
+                <div class="map-pattern-blue mb-4">
+                    <?php the_post_thumbnail('full'); ?>
+                    <a class="play-btn" href="#"><i class="fa fa-play"></i></a>
                 </div>
-                <div class="content-col col-lg-6">
-                    <div id="about-forum" class="forum-map">
-                        <div class="pattern-blue">
-                            <?php the_post_thumbnail('full'); ?>
+
+
+                <div class="content text-left">
+                    <p>
+                        <?php echo get_the_content(); ?>
+                    </p>
+                    <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
+                        <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--    About Lithuania-->
+        <section id="about-lithuania-lg" class="about-lithuania gray-bg">
+            <div class="container af-container">
+                <div id="about-lithuania-row" class="af-row row">
+
+                    <div class="map-col col-lg-6">
+                        <div class="content">
+                            <h4 class="title-h4"><?php the_title(); ?></h4>
+                            <h3 class="title-mid"><?php echo get_post_meta( get_the_ID(), 'info_sub_title', true ); ?></h3>
+                            <p>
+                                <?php echo get_the_content(); ?>
+                            </p>
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'info_details_link_url', true )?>">
+                                <?php echo get_post_meta( get_the_ID(), 'info_details_link_text', true )?>
+                            </a>
                         </div>
 
                     </div>
+                    <div class="content-col col-lg-6">
+                        <div id="about-forum" class="forum-map">
+                            <div class="pattern-blue">
+                                <?php the_post_thumbnail('full'); ?>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
