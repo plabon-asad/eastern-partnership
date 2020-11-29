@@ -11,7 +11,7 @@ function eastern_partnership_setup() {
     function style_and_scripts() {
         wp_enqueue_style( 'style', get_stylesheet_uri() );
         wp_enqueue_style( 'custom-css', get_template_directory_uri() . '/assets/css/new_custom.css' );
-        wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.0.0', false );
+        wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.0.0', true );
     }
     add_action( 'wp_enqueue_scripts', 'style_and_scripts' );
 
